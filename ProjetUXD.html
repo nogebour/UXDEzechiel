@@ -8,29 +8,34 @@
   <link href="addon.perso.css" rel="stylesheet" type="text/css"/>
   <script src="jquery-1.6.4.min.js" type="text/javascript"></script>
   <script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="themes/android-theme.css" />
+	<script type="text/javascript">
+	var DEBUG_ANDROID_THEME=true
+	</script>
+	<script type="text/javascript" src="jquery.mobile.android-theme.js"></script>
   </head> 
   <body> 
   
   <div data-role="page" id="page">
       <div data-role="header">
-          <h1>Home</h1>
+          <h1> home</h1>
+          <div data-role="navbar">
+              <ul>
+                  <li><a href="#page">Home</a></li>
+                  <li><a href="#listepatients">Patients</a></li>
+                  <li><a href="#page3">Docteurs</a></li>
+                  <li><a href="#page4">Graphes</a></li>
+              </ul> 
+          </div><!-- /navbar -->         
       </div>
       <div data-role="content">	
-          <ul data-role="listview">
-              <li><a href="#listepatients">Liste des patients</a></li>
+          <ul data-role="listview" data-split-theme="a">
+              <li><a href="#listepatients">Liste des patients</a></li> 
               <li><a href="#page3">Liste des docteurs</a></li>
               <li><a href="#page4">Graphe des patients</a></li>
           </ul>		
       </div>
-  <div data-role="footer" data-id="foo1" data-position="fixed">
-      <div data-role="navbar">
-          <ul>
-              <li><a href="#page">Home</a></li>
-              <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#page3">Docteurs</a></li>
-              <li><a href="#page4">Graphes</a></li>
-          </ul>
-      </div><!-- /navbar -->
+  <div data-role="footer" data-id="foo1" data-position="fixed">      
   </div><!-- /footer -->
   </div>
   
@@ -73,7 +78,7 @@
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
               <li><a href="#page3">Docteurs</a></li>
-              <li><a href="#page4">Graphes</a></li>
+              <li><a href="#Chart">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
       </div><!-- /footer -->
@@ -182,6 +187,16 @@
               </ul>
           </div><!-- /navbar -->
       </div><!-- /footer -->
+  </div>
+  
+  <div data-role="page" id="Chart">
+    <div data-role="header">
+      <h1>Chart Patient </h1>
+    </div>
+    <div data-role="content">Content</div>
+    <div data-role="footer">
+      <h4>Footer</h4>
+    </div>
   </div>
   
   </body>
