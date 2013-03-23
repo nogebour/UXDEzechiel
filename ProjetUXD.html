@@ -23,7 +23,7 @@
               <ul>
                   <li><a href="#page">Home</a></li>
                   <li><a href="#listepatients">Patients</a></li>
-                  <li><a href="#page3">Docteurs</a></li>
+                  <li><a href="#listedocteurs">Docteurs</a></li>
                   <li><a href="#page4">Graphes</a></li>
               </ul> 
           </div><!-- /navbar -->         
@@ -31,7 +31,7 @@
       <div data-role="content">	
           <ul data-role="listview" data-split-theme="a">
               <li><a href="#listepatients">Liste des patients</a></li> 
-              <li><a href="#page3">Liste des docteurs</a></li>
+              <li><a href="#listedocteurs">Liste des docteurs</a></li>
               <li><a href="#page4">Graphe des patients</a></li>
           </ul>		
       </div>
@@ -77,12 +77,69 @@
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#page3">Docteurs</a></li>
+              <li><a href="#listedocteurs">Docteurs</a></li>
               <li><a href="#Chart">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
       </div><!-- /footer -->
   </div>
+
+  <div data-role="page" id="mesuresPatient">
+      <div data-role="header">
+          <h1>Liste des patients</h1>
+      </div>
+      <div data-role="content">	
+       <div class=center-wrapper>
+  <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="patient-table">
+      <thead><tr>
+      <th>Mesures</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Concentration</th>
+	  <th></th>
+      </tr></thead>
+      
+      <tbody>
+      <tr>
+      <th>Morphine</th>
+      <th>22/03/13</th>
+      <th>22:35</th>
+      <th>25 mg/L</th>
+	  <th><a data-role=button href="#editMesure">Edit</a></th>
+      </tr>
+      <tr>
+      <th>Morphine</th>
+      <th>22/03/13</th>
+      <th>22:35</th>
+      <th>25 mg/L</th>
+	  <th><a data-role=button href="#editMesure">Edit</a></th>
+      </tr>
+      <tr>
+      <th>Morphine</th>
+      <th>22/03/13</th>
+      <th>22:35</th>
+      <th>25 mg/L</th>
+      <th><a data-role=button href="#editMesure">Edit</a></th>
+      </tr>
+      </tbody>
+  </table>
+  
+  <a data-role=button href="#ajoutMesure">Add a measure</a>
+  
+  </div>
+      </div>
+      <div data-role="footer" data-id="foo1" data-position="fixed">
+          <div data-role="navbar">
+              <ul>
+              <li><a href="#page">Home</a></li>
+              <li><a href="#listepatients">Patients</a></li>
+              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#Chart">Graphes</a></li>
+              </ul>
+          </div><!-- /navbar -->
+      </div><!-- /footer -->
+  </div>
+
 
   <div data-role="page" id="detailPatient">
       <div data-role="header">
@@ -105,7 +162,7 @@
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#page3">Docteurs</a></li>
+              <li><a href="#listedocteurs">Docteurs</a></li>
               <li><a href="#page4">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
@@ -133,9 +190,9 @@
           <label for="text-basic">City:</label>
           <input name="text-basic" id="edit-patient-city" value="Fribourg" type="text">
           <label for="text-basic">Mail:</label>
-          <input name="text-basic" id="edit-patient-nail" value="john.smith@something.com" type="text">
+          <input name="text-basic" id="edit-patient-mail" value="john.smith@something.com" type="text">
           <label for="text-basic">Phone:</label>
-          <input name="text-basic" id="edit-patient-phonr" value="+XX XXX XX XX XXX" type="text">
+          <input name="text-basic" id="edit-patient-phone" value="+XX XXX XX XX XXX" type="text">
           <a data-role="button" href="#listepatients">Save</a>
           <a data-role="button" href="#listepatients">Cancel</a>
       </div>
@@ -144,45 +201,116 @@
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#page3">Docteurs</a></li>
+              <li><a href="#listedocteurs">Docteurs</a></li>
               <li><a href="#page4">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
       </div><!-- /footer -->
   </div>
   
-  <div data-role="page" id="page3">
+
+  <div data-role="page" id="listedocteurs">
       <div data-role="header">
-          <h1>Page 3</h1>
+          <h1>Liste des patients</h1>
       </div>
+
       <div data-role="content">	
-          Contenu		
+       <div class=center-wrapper>
+  <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="patient-table">
+      <thead><tr>
+      <th>Nom du docteur</th>
+      </tr></thead>
+      
+      <tbody>
+      <tr>
+      <th><a href=#detaildocteur data-role=button>SMITH John</a></th>
+      </tr>
+      <tr>
+      <th><a href=#detaildocteur data-role=button>SMITH John</a></th>
+      </tr>
+      <tr>
+      <th><a href=#detaildocteur data-role=button>SMITH John</a></th>
+      </tr>
+      </tbody>
+  </table>
+  
+  <a data-role=button href="#ajoutDocteur">Add a patient</a>
+  
+  </div>
       </div>
       <div data-role="footer" data-id="foo1" data-position="fixed">
           <div data-role="navbar">
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#page3">Docteurs</a></li>
+              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#Chart">Graphes</a></li>
+              </ul>
+          </div><!-- /navbar -->
+      </div><!-- /footer -->
+  </div>
+
+  <div data-role="page" id="detaildocteur">
+      <div data-role="header">
+          <h1>Détail du docteur</h1>
+      </div>
+      <div data-role="content">	
+          <b>Name:</b> SMITH<br>
+          <b>First name:</b> John<br>
+          <b>Age:</b> 21<br>
+          <b>Gender:</b> M<br>
+          <b>Street:</b> Main street<br>
+          <b>City:</b> Fribourg<br>
+          <b>Email:</b> john.smith@something.com<br>
+          <b>Phone:</b> +XX XXX XX XX XXX<br>
+          <a data-role="button" data-inline="true" href="#editDocteur">Edit</a>
+          <a data-role="button" data-inline="true" href="#listedocteurs">Delete</a>
+      </div>
+      <div data-role="footer" data-id="foo1" data-position="fixed">
+          <div data-role="navbar">
+              <ul>
+              <li><a href="#page">Home</a></li>
+              <li><a href="#listepatients">Patients</a></li>
+              <li><a href="#listedocteurs">Docteurs</a></li>
               <li><a href="#page4">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
       </div><!-- /footer -->
   </div>
-  
-  <div data-role="page" id="page4">
+
+  <div data-role="page" id="editDocteur">
       <div data-role="header">
-          <h1>Page 4</h1>
+          <h1>Détail du docteur</h1>
       </div>
       <div data-role="content">	
-          Contenu		
+          <label for="text-basic">Name:</label>
+          <input name="text-basic" id="edit-docteur-name" value="SMITH" type="text">
+          <label for="text-basic">First name:</label>
+          <input name="text-basic" id="edit-docteur-firstName" value="John" type="text">
+          <label for="number-pattern">Age:</label>
+          <input name="number" id="edit-docteur-age" value="21" type="number">
+			<label for="select-choice-mini" class="select">Gender:</label>
+			<select name="select-choice-mini" id="edit-docteur-age" data-mini="true" data-inline="true">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    </select>
+          <label for="text-basic">Street:</label>
+          <input name="text-basic" id="edit-docteur-street" value="Main street" type="text">
+          <label for="text-basic">City:</label>
+          <input name="text-basic" id="edit-docteur-city" value="Fribourg" type="text">
+          <label for="text-basic">Mail:</label>
+          <input name="text-basic" id="edit-docteur-mail" value="john.smith@something.com" type="text">
+          <label for="text-basic">Phone:</label>
+          <input name="text-basic" id="edit-docteur-phone" value="+XX XXX XX XX XXX" type="text">
+          <a data-role="button" href="#listedocteurs">Save</a>
+          <a data-role="button" href="#listedocteurs">Cancel</a>
       </div>
       <div data-role="footer" data-id="foo1" data-position="fixed">
           <div data-role="navbar">
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#page3">Docteurs</a></li>
+              <li><a href="#listedocteurs">Docteurs</a></li>
               <li><a href="#page4">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
