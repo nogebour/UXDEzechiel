@@ -8,11 +8,11 @@
   <link href="addon.perso.css" rel="stylesheet" type="text/css"/>
   <script src="jquery-1.6.4.min.js" type="text/javascript"></script>
   <script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
-  <link rel="stylesheet" href="themes/android-theme.css" />
+  <!--<link rel="stylesheet" href="themes/android-theme.css" />
 	<script type="text/javascript">
 	var DEBUG_ANDROID_THEME=true
 	</script>
-	<script type="text/javascript" src="jquery.mobile.android-theme.js"></script>
+	<script type="text/javascript" src="jquery.mobile.android-theme.js"></script>-->
   </head> 
   <body> 
   
@@ -24,7 +24,7 @@
                   <li><a href="#page">Home</a></li>
                   <li><a href="#listepatients">Patients</a></li>
                   <li><a href="#listedocteurs">Docteurs</a></li>
-                  <li><a href="#page4">Graphes</a></li>
+                  <li><a href="#chart">Graphes</a></li>
               </ul> 
           </div><!-- /navbar -->         
       </div>
@@ -32,7 +32,7 @@
           <ul data-role="listview" data-split-theme="a">
               <li><a href="#listepatients">Liste des patients</a></li> 
               <li><a href="#listedocteurs">Liste des docteurs</a></li>
-              <li><a href="#page4">Graphe des patients</a></li>
+              <li><a href="#chart">Graphe des patients</a></li>
           </ul>		
       </div>
   <div data-role="footer" data-id="foo1" data-position="fixed">      
@@ -78,7 +78,7 @@
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
               <li><a href="#listedocteurs">Docteurs</a></li>
-              <li><a href="#Chart">Graphes</a></li>
+              <li><a href="#chart">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
       </div><!-- /footer -->
@@ -134,7 +134,7 @@
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
               <li><a href="#listedocteurs">Docteurs</a></li>
-              <li><a href="#Chart">Graphes</a></li>
+              <li><a href="#chart">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
       </div><!-- /footer -->
@@ -144,6 +144,14 @@
   <div data-role="page" id="detailPatient">
       <div data-role="header">
           <h1>Détail du patient</h1>
+          <div data-role="navbar">
+              <ul>
+              <li><a href="#page">Home</a></li>
+              <li><a href="#listepatients">Patients</a></li>
+              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#chart">Graphes</a></li>
+              </ul>
+          </div><!-- /navbar -->
       </div>
       <div data-role="content">	
           <b>Name:</b> SMITH<br>
@@ -158,20 +166,21 @@
           <a data-role="button" data-inline="true" href="#listepatients">Delete</a>
       </div>
       <div data-role="footer" data-id="foo1" data-position="fixed">
-          <div data-role="navbar">
-              <ul>
-              <li><a href="#page">Home</a></li>
-              <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#listedocteurs">Docteurs</a></li>
-              <li><a href="#page4">Graphes</a></li>
-              </ul>
-          </div><!-- /navbar -->
+          
       </div><!-- /footer -->
   </div>
 
   <div data-role="page" id="editPatient">
       <div data-role="header">
           <h1>Détail du patient</h1>
+          <div data-role="navbar">
+              <ul>
+              <li><a href="#page">Home</a></li>
+              <li><a href="#listepatients">Patients</a></li>
+              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#chart">Graphes</a></li>
+              </ul>
+          </div><!-- /navbar -->
       </div>
       <div data-role="content">	
           <label for="text-basic">Name:</label>
@@ -197,21 +206,22 @@
           <a data-role="button" href="#listepatients">Cancel</a>
       </div>
       <div data-role="footer" data-id="foo1" data-position="fixed">
-          <div data-role="navbar">
-              <ul>
-              <li><a href="#page">Home</a></li>
-              <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#listedocteurs">Docteurs</a></li>
-              <li><a href="#page4">Graphes</a></li>
-              </ul>
-          </div><!-- /navbar -->
+          
       </div><!-- /footer -->
   </div>
   
 
   <div data-role="page" id="listedocteurs">
       <div data-role="header">
-          <h1>Liste des patients</h1>
+          <h1>Liste des patients</h1> 
+          <div data-role="navbar">
+              <ul>
+              <li><a href="#page">Home</a></li>
+              <li><a href="#listepatients">Patients</a></li>
+              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#chart">Graphes</a></li>
+              </ul>
+          </div><!-- /navbar -->
       </div>
 
       <div data-role="content">	
@@ -239,20 +249,21 @@
   </div>
       </div>
       <div data-role="footer" data-id="foo1" data-position="fixed">
-          <div data-role="navbar">
-              <ul>
-              <li><a href="#page">Home</a></li>
-              <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#listedocteurs">Docteurs</a></li>
-              <li><a href="#Chart">Graphes</a></li>
-              </ul>
-          </div><!-- /navbar -->
+         
       </div><!-- /footer -->
   </div>
 
   <div data-role="page" id="detaildocteur">
       <div data-role="header">
-          <h1>Détail du docteur</h1>
+          <h1>Détail du docteur</h1> 
+          <div data-role="navbar">
+              <ul>
+              <li><a href="#page">Home</a></li>
+              <li><a href="#listepatients">Patients</a></li>
+              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#chart">Graphes</a></li>
+              </ul>
+          </div><!-- /navbar -->
       </div>
       <div data-role="content">	
           <b>Name:</b> SMITH<br>
@@ -267,20 +278,21 @@
           <a data-role="button" data-inline="true" href="#listedocteurs">Delete</a>
       </div>
       <div data-role="footer" data-id="foo1" data-position="fixed">
-          <div data-role="navbar">
-              <ul>
-              <li><a href="#page">Home</a></li>
-              <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#listedocteurs">Docteurs</a></li>
-              <li><a href="#page4">Graphes</a></li>
-              </ul>
-          </div><!-- /navbar -->
+         
       </div><!-- /footer -->
   </div>
 
   <div data-role="page" id="editDocteur">
       <div data-role="header">
           <h1>Détail du docteur</h1>
+          <div data-role="navbar">
+              <ul>
+              <li><a href="#page">Home</a></li>
+              <li><a href="#listepatients">Patients</a></li>
+              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#chart">Graphes</a></li>
+              </ul>
+          </div><!-- /navbar -->
       </div>
       <div data-role="content">	
           <label for="text-basic">Name:</label>
@@ -306,7 +318,14 @@
           <a data-role="button" href="#listedocteurs">Cancel</a>
       </div>
       <div data-role="footer" data-id="foo1" data-position="fixed">
-          <div data-role="navbar">
+          
+      </div><!-- /footer -->
+  </div>
+  
+  <div data-role="page" id="chart">
+    <div data-role="header">
+      <h1>Chart Patient </h1>
+      <div data-role="navbar">
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
@@ -314,14 +333,41 @@
               <li><a href="#page4">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
-      </div><!-- /footer -->
-  </div>
-  
-  <div data-role="page" id="Chart">
-    <div data-role="header">
-      <h1>Chart Patient </h1>
     </div>
-    <div data-role="content">Content</div>
+    <div data-role="content">
+     <div class=center-wrapper>
+      <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="patient-table">
+               
+          <tbody>
+          <tr>
+          <th>
+          		<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="true">
+                     <div data-role="collapsible">
+                        <h3>SMITH John</h3>
+                        <a href=#mesuresPatient data-role=button>Curve 0</a>
+                        <a href=#mesuresPatient data-role=button>Curve 1</a>
+                    </div>
+                </div>
+          </th>
+          <th><a href=#mesuresPatient data-role=button>Add Curve</a></th>
+          </tr>
+          <tr>
+          <th></th>
+          <th><a href=#mesuresPatient data-role=button>Add Curve</a></th>
+          </tr>
+          <tr>
+          <th></th>
+          <th><a href=#mesuresPatient data-role=button>Add Curve</a></th>
+          </tr>
+          </tbody>
+      </table>
+  
+  
+  </div>
+    
+    
+    
+    </div>
     <div data-role="footer">
       <h4>Footer</h4>
     </div>
