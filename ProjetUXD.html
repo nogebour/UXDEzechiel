@@ -344,27 +344,71 @@
           		<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="true">
                      <div data-role="collapsible">
                         <h3>SMITH John</h3>
-                        <a href=#mesuresPatient data-role=button>Curve 0</a>
-                        <a href=#mesuresPatient data-role=button>Curve 1</a>
+                        <a href=#detailCurve data-role=button>Curve 0</a>
+                        <a href=#detailCurve data-role=button>Curve 1</a>
                     </div>
                 </div>
           </th>
-          <th><a href=#mesuresPatient data-role=button>Add Curve</a></th>
+          <th><a href=#dialog data-role=button>Add Curve</a></th>
           </tr>
           <tr>
-          <th></th>
-          <th><a href=#mesuresPatient data-role=button>Add Curve</a></th>
+          <th>
+          		<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="true">
+                     <div data-role="collapsible">
+                        <h3>SMITH John</h3>
+                        <a href=#detailCurve data-role=button>Curve 0</a>
+                        <a href=#detailCurve data-role=button>Curve 1</a>
+                    </div>
+                </div>
+           </th>
+          <th><a href=#dialog data-role=button>Add Curve</a></th>
           </tr>
           <tr>
-          <th></th>
-          <th><a href=#mesuresPatient data-role=button>Add Curve</a></th>
+          <th>
+          	<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="true">
+                     <div data-role="collapsible">
+                        <h3>SMITH John</h3>
+                        <a href=#detailCurve data-role=button>Curve 0</a>
+                        <a href=#detailCurve data-role=button>Curve 1</a>
+                    </div>
+                </div>
+          </th>
+          <th><a href=#dialog data-role=button>Add Curve</a></th>
           </tr>
           </tbody>
       </table>
   
   
+  </div>    
+    </div>
+    <div data-role="footer">
+      <h4>Footer</h4>
+    </div>
   </div>
-    
+  
+  <!--Dialog chart-->
+  <div data-role="page" id="dialog">
+    <div data-role="header">
+      <h1>Header</h1>
+    </div>
+    <div data-role="content">
+      <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup" data-type="horizontal">
+          <legend>Percentiles</legend>
+          <input type="checkbox" name="procentiles" id="procentiles_0" class="custom" value="" />
+          <label for="procentiles_0">25-95</label>
+          <input type="checkbox" name="procentiles" id="procentiles_1" class="custom" value="" />
+          <label for="procentiles_1">10-90</label>
+          <input type="checkbox" name="procentiles" id="procentiles_2" class="custom" value="" />
+          <label for="procentiles_2">5-95</label>
+        </fieldset>
+      </div>
+      
+      <fieldset class="ui-grid-b">
+        <div ><button type="submit" >Advanced</button></div>
+        <div ><button type="submit" >Cancel</button></div>
+        <div ><button type="submit" >OK</button></div>
+      </fieldset>
     
     
     </div>
@@ -372,6 +416,32 @@
       <h4>Footer</h4>
     </div>
   </div>
+  
+  <!--Advanced settings-->
+  <div data-role="page" id="advanceDialog">
+    <div data-role="header">
+      <h1>Header</h1>
+    </div>
+    <div data-role="content">Content</div>
+    <div data-role="footer">
+      <h4>Footer</h4>
+    </div>
+  </div>
+  
+  
+  <div data-role="page" id="detailCurve">
+    <div data-role="header">
+      <h1>Header</h1>
+    </div>
+    <div data-role="content">Content</div>
+    <div data-role="footer">
+      <h4>Footer</h4>
+    </div>
+  </div>
+  
+  
+  
+  
   
   </body>
   </html>
