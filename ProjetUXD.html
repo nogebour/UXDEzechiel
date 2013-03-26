@@ -349,7 +349,7 @@
                     </div>
                 </div>
           </th>
-          <th><a href=#dialog data-role=button>Add Curve</a></th>
+          <th><a href=#dialog data-role="dialog" data-transition="pop">Add Curve</a></th>
           </tr>
           <tr>
           <th>
@@ -361,7 +361,7 @@
                     </div>
                 </div>
            </th>
-          <th><a href=#dialog data-role=button>Add Curve</a></th>
+          <th><a href=#dialog data-role="dialog" data-transition="pop">Add Curve</a></th>
           </tr>
           <tr>
           <th>
@@ -373,7 +373,7 @@
                     </div>
                 </div>
           </th>
-          <th><a href=#dialog data-role=button>Add Curve</a></th>
+          <th><a href=#dialog data-role="dialog" data-transition="pop">Add Curve</a></th>
           </tr>
           </tbody>
       </table>
@@ -404,13 +404,34 @@
         </fieldset>
       </div>
       
-      <fieldset class="ui-grid-b">
-        <div ><button type="submit" >Advanced</button></div>
-        <div ><button type="submit" >Cancel</button></div>
-        <div ><button type="submit" >OK</button></div>
-      </fieldset>
-    
-    
+      <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="custom-table">               
+          <tbody>
+          <tr>
+              <th><label> Custom </label></th>
+              <th><div data-role="fieldcontain">
+                <label for="slider">Value:</label>
+                <input type="range" name="slider" id="slider" value="30" min="0" max="99" />
+              </div> </th>
+              <th> - </th>
+            <th> <div data-role="fieldcontain">
+              <label for="slider2">Value:</label>
+              <input type="range" name="slider2" id="slider2" value="90" min="0" max="99" />
+            </div></th>
+              </tr>
+          </tbody>
+        </table>   
+      
+      
+     	<table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="button-table">
+               
+          <tbody>
+          <tr>
+              <th><div class="ui-block-a"><a href="#advanceDialog" data-role="button" >Advanced</a></div></th>
+              <th> <div class="ui-block-a"><a href="#" data-role="button" >Cancel</a></div> </th>
+              <th> <div class="ui-block-a"><a href="#" data-role="button" >OK</a></div> </th>
+              </tr>
+          </tbody>
+        </table>   
     </div>
     <div data-role="footer">
       <h4>Footer</h4>
