@@ -14,7 +14,8 @@
 	</script>
 	<script type="text/javascript" src="jquery.mobile.android-theme.js"></script>-->
   </head> 
-  <body> 
+  <body>
+ 
   
   <div data-role="page" id="page">
       <div data-role="header">
@@ -42,6 +43,14 @@
   <div data-role="page" id="listepatients">
       <div data-role="header">
           <h1>Liste des patients</h1>
+          <div data-role="navbar">
+              <ul>
+              <li><a href="#page">Home</a></li>
+              <li><a href="#listepatients">Patients</a></li>
+              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#chart">Graphes</a></li>
+              </ul>
+          </div><!-- /navbar -->
       </div>
 
       <div data-role="content">	
@@ -73,6 +82,13 @@
   </div>
       </div>
       <div data-role="footer" data-id="foo1" data-position="fixed">
+         
+      </div><!-- /footer -->
+  </div>
+
+  <div data-role="page" id="mesuresPatient">
+      <div data-role="header">
+          <h1>Liste des patients</h1>
           <div data-role="navbar">
               <ul>
               <li><a href="#page">Home</a></li>
@@ -81,12 +97,6 @@
               <li><a href="#chart">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
-      </div><!-- /footer -->
-  </div>
-
-  <div data-role="page" id="mesuresPatient">
-      <div data-role="header">
-          <h1>Liste des patients</h1>
       </div>
       <div data-role="content">	
        <div class=center-wrapper>
@@ -129,14 +139,7 @@
   </div>
       </div>
       <div data-role="footer" data-id="foo1" data-position="fixed">
-          <div data-role="navbar">
-              <ul>
-              <li><a href="#page">Home</a></li>
-              <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#listedocteurs">Docteurs</a></li>
-              <li><a href="#chart">Graphes</a></li>
-              </ul>
-          </div><!-- /navbar -->
+         
       </div><!-- /footer -->
   </div>
 
@@ -340,7 +343,7 @@
                
           <tbody>
           <tr>
-          <th>
+          <td>
           		<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="true">
                      <div data-role="collapsible">
                         <h3>SMITH John</h3>
@@ -348,11 +351,11 @@
                         <a href=#detailCurve data-role=button>Curve 1</a>
                     </div>
                 </div>
-          </th>
-          <th><a href=#dialog data-role="button" data-rel="dialog" data-transition="pop">Add Curve</a></th>
+          </td>
+          <td><a href=#dialog data-role="button" data-rel="dialog" data-transition="pop">Add Curve</a></td>
           </tr>
           <tr>
-          <th>
+          <td>
           		<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="true">
                      <div data-role="collapsible">
                         <h3>SMITH John</h3>
@@ -360,11 +363,11 @@
                         <a href=#detailCurve data-role=button>Curve 1</a>
                     </div>
                 </div>
-           </th>
-          <th><a href=#dialog data-role="button" data-rel="dialog" data-transition="pop">Add Curve</a></th>
+           </td>
+          <td><a href=#dialog data-role="button" data-rel="dialog" data-transition="pop">Add Curve</a></td>
           </tr>
           <tr>
-          <th>
+          <td>
           	<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="true">
                      <div data-role="collapsible">
                         <h3>SMITH John</h3>
@@ -372,15 +375,16 @@
                         <a href=#detailCurve data-role=button>Curve 1</a>
                     </div>
                 </div>
-          </th>
-          <th><a href=#dialog data-role="button" data-rel="dialog" data-transition="pop">Add Curve</a></th>
+          </td>
+          <td><a href=#dialog data-role="button" data-rel="dialog" data-transition="pop">Add Curve</a></td>
           </tr>
           </tbody>
       </table>
   
   
-  </div>    
+  		</div>    
     </div>
+    
     <div data-role="footer">
       <h4>Footer</h4>
     </div>
@@ -407,109 +411,54 @@
       <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="custom-table">               
           <tbody>
           <tr>
-              <th><label> Custom </label></th>
-              <th><div data-role="fieldcontain">
+              <td><label> Custom </label></th>
+              <td><div data-role="fieldcontain">
                 <label for="slider">Value:</label>
                 <input type="range" name="slider" id="slider" value="30" min="0" max="99" />
-              </div> </th>
-              <th> - </th>
-            <th> <div data-role="fieldcontain">
+              </div> </td>
+              <td> - </td>
+            <td> <div data-role="fieldcontain">
               <label for="slider2">Value:</label>
               <input type="range" name="slider2" id="slider2" value="90" min="0" max="99" />
-            </div></th>
+            </div></td>
               </tr>
           </tbody>
         </table>   
-      
-      
-     	<table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="button-table">
-               
-          <tbody>
-          <tr>
-              <th><div class="ui-block-a"><a href="#advanceDialog" data-role="button" data-rel="dialog" data-transition="pop" >Advanced</a></div></th>
-              <th> <div class="ui-block-a"><a href="#chart" data-role="button" >Cancel</a></div> </th>
-              <th> <div class="ui-block-a"><a href="#genetareCurve" data-role="button" >OK</a></div> </th>
-              </tr>
-          </tbody>
-        </table>   
+       <div class="center-button">
+      		<div class="ui-block-a"><a href="#advanceDialog" data-role="button" data-rel="dialog" data-transition="pop" >Advanced</a></div>
+            <div class="ui-block-a"><a href="#chart" data-role="button" >Cancel</a></div> 
+            <div class="ui-block-a"><a href="#genetareCurve" data-role="button" >OK</a></div> 
+       </div>    
     </div>
     <div data-role="footer">
       <h4>Footer</h4>
     </div>
   </div>
   
-  <!--Advanced settings-->
-  <div data-role="popup" id="advanceDialog">
-    <div data-role="header">
-      <h1>Header</h1>
-    </div>
-    <div data-role="content">
-    
-    <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="button-table">
-            
-          <tbody>
-              <tr>
-                <th><label> Curve:</label></th>
-                <th> <input name="text-basic" id="curve-name" value="Curve 0" type="text"></th>
-              </tr>
-              <tr>
-                <th><label> Model:</label></th>
-                <th>
-                
-                    <select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
-                        <option value="standard">Analytic</option>
-                        <option value="rush">Analitic bi-compartemental</option>
-                        <option value="express">Runge-Kutta</option>
-                        <option value="overnight">Runge-Kutta bi-compartemental</option>
-                    </select>
-                </th>
-              </tr>
-               <tr>
-                <th><label> Parameter type:</label></th>
-                <th>
-                
-                    <select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
-                        <option value="standard">Typical patient</option>
-                        <option value="rush">A priori adjustement</option>
-                        <option value="express">A posteriori adjustement</option>            
-                    </select>
-                </th>
-              </tr>
-              <tr>
-               <th><label> Percentile engine:</label> </th>
-               <th><label> Taylor</label> </th>
-              </tr>
-               <tr>
-               <th><label> Post engine:</label> </th>
-               <th><label> Bayesian</label> </th>
-              </tr>
-               <tr>
-               <th><label> Reverse engine:</label> </th>
-               <th><label> Point CSP</label> </th>
-              </tr>
-             <tr>
-              <th> <div class="ui-block-a"><a href="#chart" data-role="button" >Cancel</a></div> </th>
-              <th> <div class="ui-block-a"><a href="#genetareCurve" data-role="button" >OK</a></div> </th>
-              </tr>
-          </tbody>
-        </table>   
-    
-    </div>
-    <div data-role="footer">
-      <h4>Footer</h4>
-    </div>
-  </div>
+ 
   
   <!-- generating curve-->
   <div data-role="page" id="genetareCurve">
     <div data-role="header">
       <h1>Generate Curve</h1>
+       <div data-role="navbar">
+              <ul>
+              <li><a href="#page">Home</a></li>
+              <li><a href="#listepatients">Patients</a></li>
+              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#chart">Graphes</a></li>
+              </ul>
+          </div><!-- /navbar -->
     </div>
     <div data-role="content">
-    	
-        
     
+    <img src="images site/Screen Shot 2013-03-22 at 3.09.32 PM.png" width="616" height="293" alt="curve 0">
+    
+        <div class="center-button">
+            <a href="#detailCurve" data-role="button" data-inline="true">Save</a> 
+        </div>
     </div>
+    
     <div data-role="footer">
       <h4>Footer</h4>
     </div>
@@ -521,12 +470,183 @@
   <div data-role="page" id="detailCurve">
     <div data-role="header">
       <h1>Header</h1>
+       <div data-role="navbar">
+              <ul>
+              <li><a href="#page">Home</a></li>
+              <li><a href="#listepatients">Patients</a></li>
+              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#chart">Graphes</a></li>
+              </ul>
+        </div><!-- /navbar -->
     </div>
-    <div data-role="content">Content</div>
+    <div data-role="content">
+    	<img src="images site/Screen Shot 2013-03-22 at 3.09.32 PM.png" width="616" height="293" alt="curve 0">
+    
+        <div class="center-button">
+            <a href="#" data-role="button" data-inline="true">Send</a> 
+            <a href="#prediction" data-role="button" data-inline="true">Prediction</a> 
+            <a href="#newDosage" data-role="button" data-inline="true" data-rel="dialog" data-transition="pop">Change dosage</a> 
+            <a href="#mesuresPatient" data-role="button" data-inline="true">Add measure</a> 
+        </div>	 
+    
+    </div>
     <div data-role="footer">
       <h4>Footer</h4>
     </div>
   </div>
+  
+  <!--predictions-->
+  <div data-role="page" id="prediction">
+    <div data-role="header">
+      <h1>Predictions</h1>
+       <div data-role="navbar">
+              <ul>
+              <li><a href="#page">Home</a></li>
+              <li><a href="#listepatients">Patients</a></li>
+              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#chart">Graphes</a></li>
+              </ul>
+          </div><!-- /navbar -->
+    </div>
+    <div data-role="content">
+    	<img src="images site/Sans titre-0.jpg" width="442" height="345">
+     	<div class="center-button">
+        	<a href="#" data-role="button" data-icon="arrow-l"   data-inline="true"></a>
+            <a href="#" data-role="button" data-inline="true">Save</a> 
+            <a href="#" data-role="button" data-icon="arrow-r"   data-inline="true"></a>
+     	</div>
+        <div class="center-button">
+        	<a href="#" data-role="button" data-inline="true">Targets</a> 
+        </div>
+    </div>
+    <div data-role="footer">
+      <h4>Footer</h4>
+    </div>
+  </div>
+  
+  <!--new dosage-->
+  <div data-role="page" id="newDosage">
+    <div data-role="header">
+      <h1>New dosage</h1>
+    </div>
+    <div data-role="content">
+    	<table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="custom-table">               
+          <tbody>
+          	<tr>
+              <td><label> Date </label></th>
+              <td><input data-clear-btn="false" name="date-1" id="date-1" value="" type="date"> </td>
+             </tr>
+             <tr>
+              <td> <label>Time <label> </td>
+           	  <td> <input data-clear-btn="false" name="time-1" id="time-1" value="" type="time"> </td>
+             </tr>
+           </tbody>
+        </table>   
+                <form>
+                    <fieldset data-role="controlgroup" data-type="horizontal">                       
+                        <input name="checkbox-h-2a" id="checkbox-h-2a" type="checkbox">
+                        <label for="checkbox-h-2a">Use today</label>
+                        <input name="checkbox-h-2b" id="checkbox-h-2b" type="checkbox">
+                        <label for="checkbox-h-2b">Use steady state</label>
+                        
+                    </fieldset>
+                </form>
+         <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="custom-table">               
+          <tbody>  
+             <tr>
+              <td> <label>Dosage <label> </td>
+           	  <td> <input name="text-1" id="text-1" value="" type="text"></td>
+             </tr>
+             <tr>
+              <td> <label>Interval <label> </td>
+           	  <td> <input name="text-1" id="text-1" value="" type="text"></td>
+             </tr>             
+          </tbody>
+        </table> 
+     <div class="center-button">
+        <a href="#detailCurve" data-role="button" data-inline="true">Cancel</a>
+        <a href="#detailCurve" data-role="button" data-inline="true">Ok</a>
+      </div>   
+    </div>
+    <div data-role="footer">
+      <h4>Footer</h4>
+    </div>
+  </div>
+  
+  
+   <!--Advanced settings-->
+  <div data-role="page" id="advanceDialog">
+    <div data-role="header">
+      <h1>Header</h1>
+    </div>
+    <div data-role="content">
+    
+    <table data-role="table"   class="ui-responsive table-stroke" id="button-table">
+            
+          <tbody>
+              <tr>
+                    <td><label> Curve:</label></td>
+                    <td> <input  name="text-basic" id="curve-name" value="Curve 0" type="text"></td>
+              </tr>
+              <tr>
+                    <td><label> Model:</label></td>
+                    <td>                    
+                        <select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
+                            <option value="standard">Analytic</option>
+                            <option value="rush">Analitic bi-compartemental</option>
+                            <option value="express">Runge-Kutta</option>
+                            <option value="overnight">Runge-Kutta bi-compartemental</option>
+                        </select>
+                    </td>
+              </tr>
+               <tr>
+                    <td><label> Parameter type:</label></td>
+                    <td>                
+                        <select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
+                            <option value="standard">Typical patient</option>
+                            <option value="rush">A priori adjustement</option>
+                            <option value="express">A posteriori adjustement</option>            
+                        </select>
+                    </td>
+              </tr>
+              <tr>
+                   <td><label> Percentile engine:</label> </td>
+                   <td><label> Taylor</label> </td>
+              </tr>
+               <tr>
+                   <td><label> Post engine:</label> </td>
+                   <td><label> Bayesian</label> </td>
+              </tr>
+               <tr>
+                   <td><label> Reverse engine:</label> </td>
+                   <td><label> Point CSP</label> </td>
+              </tr>
+            
+          </tbody>
+        </table>   
+     <div class="center-button">
+        <a href="#dialog" data-role="button" data-inline="true">Cancel</a>
+        <a href="#genetareCurve" data-role="button" data-inline="true">Ok</a>
+      </div>
+    </div>
+    <div data-role="footer">
+      <h4>Footer</h4>
+    </div>
+  </div>
+  
+  
+  <div data-role="page" id="page2">
+    <div data-role="header">
+      <h1>Header</h1>
+    </div>
+    <div data-role="content">
+    </div>
+    <div data-role="footer">
+      <h4>Footer</h4>
+    </div>
+  </div>
+  
+  
   
   
   
