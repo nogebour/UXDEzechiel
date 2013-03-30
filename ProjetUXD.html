@@ -426,7 +426,7 @@
                
           <tbody>
           <tr>
-              <th><div class="ui-block-a"><a href="#advanceDialog" data-role="button" >Advanced</a></div></th>
+              <th><div class="ui-block-a"><a href="#advanceDialog" data-role="button" data-rel="dialog" data-transition="pop" >Advanced</a></div></th>
               <th> <div class="ui-block-a"><a href="#chart" data-role="button" >Cancel</a></div> </th>
               <th> <div class="ui-block-a"><a href="#genetareCurve" data-role="button" >OK</a></div> </th>
               </tr>
@@ -439,7 +439,7 @@
   </div>
   
   <!--Advanced settings-->
-  <div data-role="page" id="advanceDialog">
+  <div data-role="popup" id="advanceDialog">
     <div data-role="header">
       <h1>Header</h1>
     </div>
@@ -503,9 +503,13 @@
   <!-- generating curve-->
   <div data-role="page" id="genetareCurve">
     <div data-role="header">
-      <h1>Header</h1>
+      <h1>Generate Curve</h1>
     </div>
-    <div data-role="content">Content</div>
+    <div data-role="content">
+    	
+        
+    
+    </div>
     <div data-role="footer">
       <h4>Footer</h4>
     </div>
