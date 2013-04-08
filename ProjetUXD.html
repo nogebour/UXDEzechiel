@@ -25,7 +25,7 @@
                   <li><a href="#page">Home</a></li>
                   <li><a href="#listepatients">Patients</a></li>
                   <li><a href="#listedocteurs">Doctors</a></li>
-                  <li><a href="#chart">Graphes</a></li>
+                  <li><a href="#chart">Chart</a></li>
               </ul> 
           </div><!-- /navbar -->         
       </div>
@@ -48,7 +48,7 @@
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
               <li><a href="#listedocteurs">Doctors</a></li>
-              <li><a href="#chart">Graphes</a></li>
+              <li><a href="#chart">Chart</a></li>
               </ul>
           </div><!-- /navbar -->
       </div>
@@ -121,6 +121,10 @@
                        <td><label> Street:</label> </td>
                        <td><input name="text-1" id="text-1" value="" type="text"> </td>
                   </tr>
+                  <tr>
+                       <td><label> City:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                  </tr>
                    <tr>
                        <td><label> Postcode:</label> </td>
                        <td><input name="text-1" id="text-1" value="" type="text"> </td>
@@ -178,10 +182,8 @@
                   
                </tbody>
             </table>
-         <div class="center-button">
+         
             <a href="#listepatients" data-role="button" data-inline="true">Save</a>           
-         </div>    
-           
   
     </div>
     <div data-role="footer">
@@ -200,7 +202,7 @@
                   <input name="user" id="un" value="" placeholder="username"  type="text">
                   <label for="pw" class="ui-hidden-accessible">Password:</label>
                   <input name="pass" id="pw" value="" placeholder="password"  type="password">                  
-                  <a href="#listepatients" data-role="button" data-inline="true">Sign in</a>
+                  <a data-rel="back" data-role="button" data-inline="true">Sign in</a>
                 </div>
        	 </form>
    		   
@@ -217,7 +219,7 @@
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
               <li><a href="#listedocteurs">Doctors</a></li>
-              <li><a href="#chart">Graphes</a></li>
+              <li><a href="#chart">Chart</a></li>
               </ul>
           </div><!-- /navbar -->
       </div>
@@ -269,27 +271,47 @@
 
   <div data-role="page" id="detailPatient">
       <div data-role="header">
-          <h1>Détail du patient</h1>
+          <h1>Details of patient</h1>
           <div data-role="navbar">
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
               <li><a href="#listedocteurs">Doctors</a></li>
-              <li><a href="#chart">Graphes</a></li>
+              <li><a href="#chart">Chart</a></li>
               </ul>
           </div><!-- /navbar -->
       </div>
       <div data-role="content">	
-          <b>Name:</b> SMITH<br>
-          <b>First name:</b> John<br>
-          <b>Age:</b> 21<br>
+      
+      <div data-role="collapsible">
+    	<h4>SMITH John</h4>
+    	  <b>Age:</b> 21<br>
           <b>Gender:</b> M<br>
           <b>Street:</b> Main street<br>
           <b>City:</b> Fribourg<br>
+          <b>Postecode:</b> Fribourg<br>
           <b>Email:</b> john.smith@something.com<br>
-          <b>Phone:</b> +XX XXX XX XX XXX<br>
-          <a data-role="button" data-inline="true" href="#editPatient">Edit</a>
-          <a data-role="button" data-inline="true" href="#listepatients">Delete</a>
+          <b>Phone:</b> +XX XXX XX XX XXX<br>          
+            
+	  </div>
+      
+      		<b>Medical info:</b> <br>
+    	  	<b>Drug:</b> Morphine<br>
+          	<b>Dosage:</b> 400 mg<br>
+          	<b>Date:</b> 20/02/2013<br>
+          	<b>Weight:</b> 60kg<br>
+          	<b>Administration:</b> 12h<br>         
+	  		<b> </b>
+          <div>  
+              <ul data-role="listview" >
+                  <li><a href="#mesuresPatient">List measures</a></li> 
+                  <li><a href="#chart">List curves</a></li>              
+               </ul>  	
+           </div>  
+         <div class="center-button">          
+              <a data-role="button" data-inline="true" href="#editPatient">Edit</a>
+              <a data-role="button" data-inline="true" href="#listepatients">Delete</a>
+           </div>
       </div>
       <div data-role="footer" data-id="foo1" data-position="fixed">
           
@@ -304,7 +326,7 @@
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
               <li><a href="#listedocteurs">Doctors</a></li>
-              <li><a href="#chart">Graphes</a></li>
+              <li><a href="#chart">Chart</a></li>
               </ul>
           </div><!-- /navbar -->
       </div>
@@ -429,7 +451,7 @@
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
               <li><a href="#listedocteurs">Doctors</a></li>
-              <li><a href="#chart">Graphes</a></li>
+              <li><a href="#chart">Chart</a></li>
               </ul>
           </div><!-- /navbar -->
       </div>
@@ -454,7 +476,7 @@
       </tbody>
   </table>
   
-  <a data-role=button href="#ajoutDocteur">Add a doctor</a>
+  <a data-role=button href="#ajoutDoctor">Add a doctor</a>
   
   </div>
       </div>
@@ -471,7 +493,7 @@
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
               <li><a href="#listedocteurs">Doctors</a></li>
-              <li><a href="#chart">Graphes</a></li>
+              <li><a href="#chart">Chart</a></li>
               </ul>
           </div><!-- /navbar -->
       </div>
@@ -500,7 +522,7 @@
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
               <li><a href="#listedocteurs">Doctors</a></li>
-              <li><a href="#chart">Graphes</a></li>
+              <li><a href="#chart">Chart</a></li>
               </ul>
           </div><!-- /navbar -->
       </div>
@@ -532,6 +554,70 @@
       </div><!-- /footer -->
   </div>
   
+  
+  <div data-role="page" id="ajoutDoctor">
+    <div data-role="header">
+      <h1>Add doctor</h1>
+    </div>
+    <div data-role="content">
+   		 <div class="center-button">
+        	<a href=" #popupLogin" data-rel="dialog"  data-role="button" data-transition="pop"> Import from database </a> 
+        </div>
+            
+         <table data-role="table"   class="ui-responsive table-stroke" id="button-table">
+                
+              <tbody>
+              	   <tr>
+                       <td><label> First name:</label> </td>
+                       <td><input  name="text-1" id="text-1" value="" type="text"> </td>
+                   </tr>
+                   <tr>
+                       <td><label> Name:</label> </td>
+                       <td><input data-clear-btn="false" name="date-1" id="date-1" value="" type="date"> </td>
+                   </tr>
+                   <tr>
+                       <td><label> Age:</label> </td>
+                       <td><input data-clear-btn="false" name="time-1" id="time-1" value="" type="time"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Gendre:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Street:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                  </tr>
+                  <tr>
+                       <td><label> City:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Postcode:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Mail:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Phone:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                  </tr>
+              </tbody>
+            </table>
+            
+           	 <a href="#listedocteurs" data-role="button" data-inline="true">Save</a>           
+         	 
+         </div>
+    <div data-role="footer">
+      <h4>Footer</h4>
+    </div>
+  </div>
+  
+  
+  
+  
+  
   <div data-role="page" id="chart">
     <div data-role="header">
       <h1>Chart Patient </h1>
@@ -540,7 +626,7 @@
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
               <li><a href="#listedocteurs">Doctors</a></li>
-              <li><a href="#chart">Graphes</a></li>
+              <li><a href="#chart">Chart</a></li>
               </ul>
           </div><!-- /navbar -->
     </div>
@@ -551,7 +637,7 @@
           <tbody>
           <tr>
           <td>
-          		<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="true">
+          		<div  id="curvesPatient"data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="true">
                      <div data-role="collapsible">
                         <h3>SMITH John</h3>
                         <a href=#detailCurve data-role=button>Curve 0</a>
@@ -653,7 +739,7 @@
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
               <li><a href="#listedocteurs">Doctors</a></li>
-              <li><a href="#chart">Graphes</a></li>
+              <li><a href="#chart">Chart</a></li>
               </ul>
           </div><!-- /navbar -->
     </div>
@@ -682,7 +768,7 @@
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
               <li><a href="#listedocteurs">Doctors</a></li>
-              <li><a href="#chart">Graphes</a></li>
+              <li><a href="#chart">Chart</a></li>
               </ul>
         </div><!-- /navbar -->
     </div>
@@ -715,7 +801,7 @@
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
               <li><a href="#listedocteurs">Doctors</a></li>
-              <li><a href="#chart">Graphes</a></li>
+              <li><a href="#chart">Chart</a></li>
               </ul>
           </div><!-- /navbar -->
     </div>
@@ -854,7 +940,7 @@
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
               <li><a href="#listedocteurs">Doctors</a></li>
-              <li><a href="#chart">Graphes</a></li>
+              <li><a href="#chart">Chart</a></li>
               </ul>
           </div><!-- /navbar -->
     </div>
