@@ -93,8 +93,10 @@
     </div>
     <div data-role="content">
     	<div class="center-button">
-        	<a href=" " data-role="button"> Import from database </a>        
+        	<a href=" #popupLogin" data-rel="dialog"  data-role="button" data-transition="pop"> Import from database </a>        
         </div>
+         
+    
     
          <table data-role="table"   class="ui-responsive table-stroke" id="button-table">
                 
@@ -115,19 +117,96 @@
                        <td><label> Gendre:</label> </td>
                        <td><input name="text-1" id="text-1" value="" type="text"> </td>
                   </tr>
+                   <tr>
+                       <td><label> Street:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Postcode:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Mail:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Phone:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                  </tr>
+              </tbody>
+            </table>
+            <table data-role="table"   class="ui-responsive table-stroke" id="button-table">
+                
+              <tbody>
+                   <tr>
+                       <label> Medical info:</label>                        
+                  </tr>
+                   <tr>
+                       <td><label> Drug:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Dosage:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Date:</label> </td>
+                       <td><input name="date-1" id="date-1" value="" type="date"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Weight:</label> </td>
+                       <td><input name="number-1" id="number-1" value="" type="number"> </td>
+                  </tr>
+                   <tr>
+                       <td>                      
+                         <label>
+                            <input name="checkbox-0 " type="checkbox">Gist
+                         </label>
+                    	 </td>                     
+                  </tr>
+                  <tr>
+                       <td><label> Administration:</label> </td>             
+                     <td><select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
+                                        <option value="standard">4h</option> 
+                                        <option value="standard">6h</option> 
+                                        <option value="standard">12h</option> 
+                                        <option value="standard">18h</option> 
+                                        <option value="standard">24h</option>                            
+                        </select>
+                      </td>
+                  </tr>
+                  
                </tbody>
             </table>
-    
+         <div class="center-button">
+            <a href="#listepatients" data-role="button" data-inline="true">Save</a>           
+         </div>    
+           
+  
     </div>
     <div data-role="footer">
       <h4>Footer</h4>
     </div>
   </div>
   
-  
-  
-  
-  
+  <div data-role="page" id="popupLogin">
+    
+    <div data-role="content">
+ 
+         <form>
+            	<div style="padding:10px 20px;">
+                  <h3>Please sign in</h3>
+                  <label for="un" class="ui-hidden-accessible">Username:</label>
+                  <input name="user" id="un" value="" placeholder="username"  type="text">
+                  <label for="pw" class="ui-hidden-accessible">Password:</label>
+                  <input name="pass" id="pw" value="" placeholder="password"  type="password">                  
+                  <a href="#listepatients" data-role="button" data-inline="true">Sign in</a>
+                </div>
+       	 </form>
+   		   
+     </div>
+    
+  </div> 
   
 
   <div data-role="page" id="mesuresPatient">
