@@ -24,7 +24,7 @@
               <ul>
                   <li><a href="#page">Home</a></li>
                   <li><a href="#listepatients">Patients</a></li>
-                  <li><a href="#listedocteurs">Docteurs</a></li>
+                  <li><a href="#listedocteurs">Doctors</a></li>
                   <li><a href="#chart">Graphes</a></li>
               </ul> 
           </div><!-- /navbar -->         
@@ -47,7 +47,7 @@
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#listedocteurs">Doctors</a></li>
               <li><a href="#chart">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
@@ -64,15 +64,15 @@
       <tbody>
       <tr>
       <th><a href=#detailPatient data-role=button>SMITH John</a></th>
-      <th><a href=#mesuresPatient data-role=button>Mesures</a></th>
+      <th><a href=#mesuresPatient data-role=button>Measures</a></th>
       </tr>
       <tr>
       <th><a href=#detailPatient data-role=button>SMITH John</a></th>
-      <th><a href=#mesuresPatient data-role=button>Mesures</a></th>
+      <th><a href=#mesuresPatient data-role=button>Measures</a></th>
       </tr>
       <tr>
       <th><a href=#detailPatient data-role=button>SMITH John</a></th>
-      <th><a href=#mesuresPatient data-role=button>Mesures</a></th>
+      <th><a href=#mesuresPatient data-role=button>Measures</a></th>
       </tr>
       </tbody>
   </table>
@@ -93,7 +93,7 @@
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#listedocteurs">Doctors</a></li>
               <li><a href="#chart">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
@@ -102,7 +102,7 @@
        <div class=center-wrapper>
   <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="patient-table">
       <thead><tr>
-      <th>Mesures</th>
+      <th>Drug</th>
       <th>Date</th>
       <th>Time</th>
       <th>Concentration</th>
@@ -111,30 +111,30 @@
       
       <tbody>
       <tr>
-      <th>Morphine</th>
-      <th>22/03/13</th>
-      <th>22:35</th>
-      <th>25 mg/L</th>
-	  <th><a data-role=button href="#editMesure">Edit</a></th>
+      <td>Morphine</td>
+      <td>22/03/13</td>
+      <td>22:35</td>
+      <td>25 mg/L</td>
+	  <td><a data-role="button" data-rel="dialog" data-transition="pop" href="#editMeasure">Edit</a></td>
       </tr>
       <tr>
-      <th>Morphine</th>
-      <th>22/03/13</th>
-      <th>22:35</th>
-      <th>25 mg/L</th>
-	  <th><a data-role=button href="#editMesure">Edit</a></th>
+      <td>Morphine</td>
+      <td>22/03/13</td>
+      <td>22:35</td>
+      <td>25 mg/L</td>
+	  <td><a data-role="button" data-rel="dialog" data-transition="pop"href="#editMeasure">Edit</a></td>
       </tr>
       <tr>
-      <th>Morphine</th>
-      <th>22/03/13</th>
-      <th>22:35</th>
-      <th>25 mg/L</th>
-      <th><a data-role=button href="#editMesure">Edit</a></th>
+      <td>Morphine</td>
+      <td>22/03/13</td>
+      <td>22:35</td>
+      <td>25 mg/L</td>
+      <td><a data-role="button"data-rel="dialog" data-transition="pop" href="#editMeasure">Edit</a></td>
       </tr>
       </tbody>
   </table>
   
-  <a data-role="button" href="#ajoutMesure">Add a measure</a>
+  <a data-role="button" data-rel="dialog" data-transition="pop" href="#ajoutMeasure">Add a measure</a>
   
   </div>
       </div>
@@ -151,7 +151,7 @@
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#listedocteurs">Doctors</a></li>
               <li><a href="#chart">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
@@ -180,7 +180,7 @@
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#listedocteurs">Doctors</a></li>
               <li><a href="#chart">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
@@ -213,6 +213,90 @@
       </div><!-- /footer -->
   </div>
   
+  
+  
+  <div data-role="page" id="editMeasure">
+    <div data-role="header">
+      <h1>Edit measure</h1>
+    </div>
+    <div data-role="content">
+    	<table data-role="table"   class="ui-responsive table-stroke" id="button-table">
+            
+              <tbody>
+               		<tr>
+                       <td><label> Drug:</label> </td>
+                       <td><input  name="text-1" id="text-1" value="Morphine" type="text"> </td>
+                   </tr>
+                   <tr>
+                       <td><label> Date:</label> </td>
+                       <td><input data-clear-btn="false" name="date-1" id="date-1" value="22/03/13" type="date"> </td>
+                   </tr>
+                   <tr>
+                       <td><label> Time:</label> </td>
+                       <td><input data-clear-btn="false" name="time-1" id="time-1" value="22:35" type="time"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Obs concentration:</label> </td>
+                       <td><input name="text-1" id="text-1" value="25 mg/L" type="text"> </td>
+                  </tr>
+               </tbody>
+            </table>
+              
+    	<div class="center-button">
+            <a href="#mesuresPatient" data-role="button" data-inline="true">Cancel</a>
+            <a href="#mesuresPatient" data-role="button" data-inline="true">Ok</a>
+         </div>   
+    
+    
+    </div>
+    <div data-role="footer">
+      <h4>Footer</h4>
+    </div>
+  </div>
+  
+  
+  <div data-role="page" id="ajoutMeasure">
+    <div data-role="header">
+      <h1>New measure</h1>
+    </div>
+    <div data-role="content">
+    	  <table data-role="table"   class="ui-responsive table-stroke" id="button-table">
+            
+              <tbody>
+              	   <tr>
+                       <td><label> Drug:</label> </td>
+                       <td><input  name="text-1" id="text-1" value="" type="text"> </td>
+                   </tr>
+                   <tr>
+                       <td><label> Date:</label> </td>
+                       <td><input data-clear-btn="false" name="date-1" id="date-1" value="" type="date"> </td>
+                   </tr>
+                   <tr>
+                       <td><label> Time:</label> </td>
+                       <td><input data-clear-btn="false" name="time-1" id="time-1" value="" type="time"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Obs concentration:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                  </tr>
+               </tbody>
+            </table>
+              
+    	<div class="center-button">
+            <a href="#mesuresPatient" data-role="button" data-inline="true">Cancel</a>
+            <a href="#mesuresPatient" data-role="button" data-inline="true">Ok</a>
+         </div>   
+    
+    </div>
+    <div data-role="footer">
+      <h4>Footer</h4>
+    </div>
+  </div>
+  
+  
+  
+  
+  
 
   <div data-role="page" id="listedocteurs">
       <div data-role="header">
@@ -221,7 +305,7 @@
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#listedocteurs">Doctors</a></li>
               <li><a href="#chart">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
@@ -247,7 +331,7 @@
       </tbody>
   </table>
   
-  <a data-role=button href="#ajoutDocteur">Add a patient</a>
+  <a data-role=button href="#ajoutDocteur">Add a doctor</a>
   
   </div>
       </div>
@@ -263,7 +347,7 @@
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#listedocteurs">Doctors</a></li>
               <li><a href="#chart">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
@@ -292,7 +376,7 @@
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#listedocteurs">Doctors</a></li>
               <li><a href="#chart">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
@@ -332,7 +416,7 @@
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#listedocteurs">Doctors</a></li>
               <li><a href="#chart">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
@@ -445,7 +529,7 @@
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#listedocteurs">Doctors</a></li>
               <li><a href="#chart">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
@@ -474,7 +558,7 @@
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#listedocteurs">Doctors</a></li>
               <li><a href="#chart">Graphes</a></li>
               </ul>
         </div><!-- /navbar -->
@@ -503,7 +587,7 @@
               <ul>
               <li><a href="#page">Home</a></li>
               <li><a href="#listepatients">Patients</a></li>
-              <li><a href="#listedocteurs">Docteurs</a></li>
+              <li><a href="#listedocteurs">Doctors</a></li>
               <li><a href="#chart">Graphes</a></li>
               </ul>
           </div><!-- /navbar -->
@@ -516,7 +600,7 @@
             <a href="#" data-role="button" data-icon="arrow-r"   data-inline="true"></a>
      	</div>
         <div class="center-button">
-        	<a href="#" data-role="button" data-inline="true">Targets</a> 
+        	<a href="#target" data-role="button" data-inline="true">Targets</a> 
         </div>
     </div>
     <div data-role="footer">
@@ -637,9 +721,53 @@
   
   <div data-role="page" id="target">
     <div data-role="header">
-      <h1>Header</h1>
+      <h1>Targets</h1>
+      <div data-role="navbar">
+              <ul>
+              <li><a href="#page">Home</a></li>
+              <li><a href="#listepatients">Patients</a></li>
+              <li><a href="#listedocteurs">Doctors</a></li>
+              <li><a href="#chart">Graphes</a></li>
+              </ul>
+          </div><!-- /navbar -->
     </div>
     <div data-role="content">
+    	  <div class=center-wrapper>
+              <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="patient-table">
+                  <thead><tr>
+                  <th>Type</th>
+                  <th>cMin</th>
+                  <th>cBest</th>
+                  <th>tBest</th>
+                  <th>tMax</th>
+                  <th></th>
+                  </tr></thead>
+                  
+                  <tbody>
+                  <tr>
+                  <td>peak</td>
+                  <td>1200</td>
+                  <td>1300</td>
+                  <td>2h00</td>
+                  <td>3h00</td>
+                  <td><a data-role=button href="#editTarget">Edit</a></td>
+                  </tr>
+                  <tr>
+                  <td>peak</td>
+                  <td>1000</td>
+                  <td>1100</td>
+                  <td>3h00</td>
+                  <td>4h00</td>
+                  <td><a data-role=button href="#editTarget">Edit</a></td>
+                  </tr>
+                 
+                  </tbody>
+              </table>
+              
+              <a data-role="button" href="#ajoutTarget">Add target</a>
+              
+              </div>
+                
     </div>
     <div data-role="footer">
       <h4>Footer</h4>
