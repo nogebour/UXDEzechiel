@@ -14,35 +14,40 @@
 	</script>
 	<script type="text/javascript" src="jquery.mobile.android-theme.js"></script>-->
   </head> 
-  <body>
- 
-       <div data-role="page" id="home">
+    <body>   
+    
+       
+      <!--  <script type="text/javascript" src="cordova-2.5.0.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>-->
+        
+        
+         <div data-role="page" id="home">
       	<div data-role="header">
           <p> Home</p>
           <div data-role="navbar" data-theme="b">
               <ul>
-                  <li><a href="#home"><h2>Home</h2></a></li>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
                   <li><a href="#listepatients"><h2>Patients</h2></a></li>
                   <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
                   <li><a href="#chart"><h2>Chart</h2></a></li>
               </ul> 
           </div><!-- /navbar -->         
       </div>
-      <div data-role="content">	
-          <ul data-role="listview" data-split-theme="a">
-              <li><a href="#listepatients">List of patients</a></li> 
-              <li><a href="#listedocteurs">List of practicians</a></li>
-              <li><a href="#chart">Chart</a></li>
-          </ul>		
+      <div data-role="content" class="center-button">	
+          <label> Ezechiel mobile version 1.0 </label>
       </div> 
   </div>
   
   <div data-role="page" id="listepatients">
       <div data-role="header">
           <p>List of patients</p>
+ 
           <div data-role="navbar">
               <ul>
-                  <li><a href="#home"><h2>Home</h2></a></li>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
                   <li><a href="#listepatients"><h2>Patients</h2></a></li>
                   <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
                   <li><a href="#chart"><h2>Chart</h2></a></li>
@@ -54,22 +59,22 @@
        <div class=center-wrapper>
   <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="patient-table">
       <thead><tr>
-      <th>Nom du patient</th>
-      <th>Mesures</th>
+      <th>Patient name</th>
+      <th>Measures</th>
       </tr></thead>
       
       <tbody>
       <tr>
-      <th><a href=#detailPatient data-role=button>SMITH John</a></th>
-      <th><a href=#mesuresPatient data-role=button>Measures</a></th>
+      <th><a href="#detailPatient" data-role="button">SMITH John </a></th>
+      <th><a href="#ajoutMeasure3" data-role="button" data-rel="dialog" data-transition="pop">Add new measure</a></th>
       </tr>
       <tr>
-      <th><a href=#detailPatient data-role=button>SMITH John</a></th>
-      <th><a href=#mesuresPatient data-role=button>Measures</a></th>
+      <th><a href="#detailPatient" data-role="button">SMITH John</a></th>
+      <th><a href="#ajoutMeasure3" data-role="button" data-rel="dialog" data-transition="pop">Add new measure</a></th>
       </tr>
       <tr>
-      <th><a href=#detailPatient data-role=button>SMITH John</a></th>
-      <th><a href=#mesuresPatient data-role=button>Measures</a></th>
+      <th><a href="#detailPatient" data-role="button">SMITH John</a></th>
+      <th><a href="#ajoutMeasure3" data-role="button" data-rel="dialog" data-transition="pop">Add new measure</a></th>
       </tr>
       </tbody>
   </table>
@@ -103,8 +108,8 @@
                        <td><input data-clear-btn="false" name="date-1" id="date-1" value="" type="date"> </td>
                    </tr>
                    <tr>
-                       <td><label> Age:</label> </td>
-                       <td><input data-clear-btn="false" name="time-1" id="time-1" value="" type="time"> </td>
+                       <td><label> Birthday:</label> </td>
+                       <td><input data-clear-btn="false" name="time-1" id="time-1" value="" type="date"> </td>
                   </tr>
                    <tr>
                        <td><label> Gendre:</label> </td>
@@ -213,10 +218,11 @@
 
   <div data-role="page" id="mesuresPatient">
       <div data-role="header">
-          <p>List of measures</p>
+          <h1>List of measures</h1>
+          <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
         	<div data-role="navbar">
               <ul>
-                  <li><a href="#home"><h2>Home</h2></a></li>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
                   <li><a href="#listepatients"><h2>Patients</h2></a></li>
                   <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
                   <li><a href="#chart"><h2>Chart</h2></a></li>
@@ -236,22 +242,22 @@
       
       <tbody>
       <tr >
-      <td class="border">Morphine</td>
+      <td class="border">Tato</td>
       <td class="border">22/03/13</td>
       <td class="border">22:35</td>
       <td >1 ug/L</td>
 	  <td><a data-role="button" data-rel="dialog" data-transition="pop" href="#editMeasure">Edit</a></td>
       </tr>
       <tr>
-      <td class="border">Morphine</td>
+      <td class="border">Tato</td>
       <td class="border">22/03/13</td>
-      <td class="border">22:35</td>
+      <td class="border">10:30</td>
       <td>3 ug/L</td>
 	  <td><a data-role="button" data-rel="dialog" data-transition="pop"href="#editMeasure">Edit</a></td>
       </tr>
       <tr>
-      <td class="border">Morphine</td>
-      <td class="border">22/03/13</td>
+      <td class="border">Tato</td>
+      <td class="border">21/03/13</td>
       <td class="border">22:35</td>
       <td>2 ug/L</td>
       <td><a data-role="button"data-rel="dialog" data-transition="pop" href="#editMeasure">Edit</a></td>
@@ -262,17 +268,78 @@
   <a data-role="button" data-rel="dialog" data-transition="pop" href="#ajoutMeasure">Add a measure</a>
   
   </div>
+ </div>    
+</div>
+
+
+
+<div data-role="page" id="mesuresPatient2">
+      <div data-role="header">
+          <h1>List of measures</h1>
+          <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
+        	<div data-role="navbar">
+              <ul>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
+                  <li><a href="#listepatients"><h2>Patients</h2></a></li>
+                  <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
+                  <li><a href="#chart"><h2>Chart</h2></a></li>
+              </ul> 
+          </div><!-- /navbar -->  
       </div>
-    
+      <div data-role="content">	
+       <div class=center-wrapper >
+  <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="patient-table"  >
+      <thead><tr >
+      <th>Drug</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Concen.</th>
+	  <th></th>
+      </tr></thead>
+      
+      <tbody>
+      <tr >
+      <td class="border">Tato2</td>
+      <td class="border">22/03/13</td>
+      <td class="border">22:35</td>
+      <td >1 ug/L</td>
+	  <td><a data-role="button" data-rel="dialog" data-transition="pop" href="#editMeasure2">Edit</a></td>
+      </tr>
+      <tr>
+      <td class="border">Tato2</td>
+      <td class="border">22/03/13</td>
+      <td class="border">10:30</td>
+      <td>3 ug/L</td>
+	  <td><a data-role="button" data-rel="dialog" data-transition="pop"href="#editMeasure2">Edit</a></td>
+      </tr>
+      <tr>
+      <td class="border">Tato2</td>
+      <td class="border">21/03/13</td>
+      <td class="border">22:35</td>
+      <td>2 ug/L</td>
+      <td><a data-role="button"data-rel="dialog" data-transition="pop" href="#editMeasure2">Edit</a></td>
+      </tr>
+      </tbody>
+  </table>
+  
+  <a data-role="button" data-rel="dialog" data-transition="pop" href="#ajoutMeasure2">Add a measure</a>
+  
   </div>
+ </div>    
+</div>
+
+
+
+
 
 
   <div data-role="page" id="detailPatient">
       <div data-role="header">
-          <p>Patient details</p>
+          <h1>Patient details SMITH John</h1>
+          <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
           <div data-role="navbar">
               <ul>
-                  <li><a href="#home"><h2>Home</h2></a></li>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
                   <li><a href="#listepatients"><h2>Patients</h2></a></li>
                   <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
                   <li><a href="#chart"><h2>Chart</h2></a></li>
@@ -281,45 +348,228 @@
       </div>
       <div data-role="content">	
       
-      <div data-role="collapsible">
-    	<h3>SMITH John</h3>
-    	  <b>Age:</b> 21<br>
+          <ul data-role="listview" >
+                <li><a href="#personalinfo">Personal info</a></li>
+                <li><a href="#medicalinfo">Medical Info</a></li>        		
+         </ul> 	          
+        
+      </div>      
+  </div>
+  
+  
+  <div data-role="page" id="personalinfo">
+    <div data-role="header">
+      <h1>Personal Info SMITH John</h1>
+      <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
+      	<div data-role="navbar">
+              <ul>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
+                  <li><a href="#listepatients"><h2>Patients</h2></a></li>
+                  <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
+                  <li><a href="#chart"><h2>Chart</h2></a></li>
+              </ul> 
+      </div><!-- /navbar -->  
+    </div>
+    <div data-role="content">
+    
+    	  <b>SMITH John</b><br> 
+    	  <b>Birthday:</b> 21/03/1980<br>
+          <b>Weight:</b> 60kg<br>
           <b>Gender:</b> M<br>
           <b>Street:</b> Main street<br>
           <b>City:</b> Fribourg<br>
           <b>Postecode:</b> Fribourg<br>
           <b>Email:</b> john.smith@something.com<br>
-          <b>Phone:</b> +XX XXX XX XX XXX<br>          
-            
-	  </div>
-      
-      		<b>Medical info:</b> <br>
-    	  	<b>Drug:</b> Morphine<br>
-          	<b>Dosage:</b> 20 mg<br>
-          	<b>Date:</b> 20/02/2013<br>
-          	<b>Weight:</b> 60kg<br>
-          	<b>Administration:</b> 12h<br>         
-	  		<b> </b>
-          <div>  
-              <ul data-role="listview" >
-                  <li><a href="#mesuresPatient">List measures</a></li> 
-                  <li><a href="#chart">List curves</a></li>              
-               </ul>  	
-           </div>  
-         <div class="center-button">          
+          <b>Phone:</b> +XX XXX XX XX XXX<br> 
+          <div class="center-button"> 
               <a data-role="button" data-inline="true" href="#editPatient">Edit</a>
               <a data-role="button" data-inline="true" href="#listepatients">Delete</a>
            </div>
-      </div>
-      
+    </div>
   </div>
+  
+  
+  <div data-role="page" id="medicalinfo">
+    <div data-role="header">
+      <h1>Medical Info SMITH John</h1>
+      <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
+          <div data-role="navbar">
+                  <ul>
+                      <!--<li><a href="#home"><h2>Home</h2></a></li>-->
+                      <li><a href="#listepatients"><h2>Patients</h2></a></li>
+                      <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
+                      <li><a href="#chart"><h2>Chart</h2></a></li>
+                  </ul> 
+          </div><!-- /navbar -->  
+    </div>
+    <div data-role="content">
+    	
+        <div data-role="collapsible" data-icon="arrow-d" data-iconpos="right" class="ui-listview">
+        	<h4>Drug:Tato</h4>
+            <b>Date Treatment</b> 20/02/2012 <br>
+    	  	<b>Dosage:</b> 20 mg/l<br>
+            <b>Administration:</b> 12h<br> 
+          	<b>Last administration:</b> 20/05/2013 12:00h<br>
+            <b>Last dosage change:</b> 10/07/2012<br>
+          	
+          	  
+                   
+	  		<b> </b>
+            <div class="center-button">
+            	 <a href="#editmedicalinfo" data-role="button" data-inline="true" data-rel="dialog" data-transition="pop">Change dosage</a>
+            </div>
+            <b> </b>            
+          
+            <div>  
+                  <ul data-role="listview" >
+                     <li><a href="#mesuresPatient">List measures</a></li>       
+                     <li> <a href="#listcurves1">List curves </a> </li>
+                      
+                  </ul> 
+        	</div> 
+         </div>
+         
+                 <div data-role="collapsible" data-icon="arrow-d" data-iconpos="right" class="ui-listview">
+        	<h4>Drug:Tato2</h4>
+            <b>Date Treatment</b> 10/02/2011 <br>
+    	  	<b>Dosage:</b> 20 mg/l<br>
+          	<b>Administration:</b> 18h<br> 
+            <b>Last administration:</b> 20/05/2013 12:00h<br>
+          	<b>Last dosage change:</b> 10/07/2012<br>
+          	 
+                   
+	  		<b> </b>
+            <div class="center-button">
+            <a href="#editmedicalinfo" data-role="button" data-inline="true">Change Dosage</a>
+            </div>
+            <b> </b>            
+          
+            <div>  
+                  <ul data-role="listview" >
+                     <li><a href="#mesuresPatient2">List measures</a></li>       
+                     <li> <a href="#listcurves2">List curves </a> </li>
+                      
+                  </ul> 
+        	</div> 
+         </div>
+         <a data-role="button"  href="#newDrug" data-rel="dialog" data-transition="pop">Add new drug</a>         
+         
+    </div>
+  </div>
+  
+  
+  <div data-role="page" id="listcurves1">
+    <div data-role="header">
+      <h1> Tato List Curves </h1>
+      <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
+       <div data-role="navbar">
+                  <ul>
+                      <!--<li><a href="#home"><h2>Home</h2></a></li>-->
+                      <li><a href="#listepatients"><h2>Patients</h2></a></li>
+                      <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
+                      <li><a href="#chart"><h2>Chart</h2></a></li>
+                  </ul> 
+          </div><!-- /navbar -->  
+    </div>
+    <div data-role="content">
+    	<ul data-role="listview" data-inset="false" id="roll">
+        			<li><a href="#detailCurve" data-role=button>Curve 0</a></li>
+        			<li><a href="#detailCurve" data-role=button>Curve 1</a></li>        		
+    				</ul> 	
+    </div>
+  </div>
+
+ 
+  <div data-role="page" id="listcurves2">
+    <div data-role="header">
+      <h1> Tato2 List Curves </h1>
+      <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
+       <div data-role="navbar">
+                  <ul>
+                      <!--<li><a href="#home"><h2>Home</h2></a></li>-->
+                      <li><a href="#listepatients"><h2>Patients</h2></a></li>
+                      <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
+                      <li><a href="#chart"><h2>Chart</h2></a></li>
+                  </ul> 
+          </div><!-- /navbar -->  
+    </div>
+    <div data-role="content">
+    	<ul data-role="listview" data-inset="false" id="roll">
+        			<li><a href="#detailCurve" data-role=button>Curve 0</a></li>
+        			<li><a href="#detailCurve" data-role=button>Curve 1</a></li>        		
+    	 </ul> 	
+    </div>
+  </div>
+
+ 
+<div data-role="page" id="newDrug">
+    <div data-role="header">
+      <p>New drug</p>
+    </div>
+    <div data-role="content">
+    	<table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="custom-table">               
+          <tbody>
+          <tr>
+          <td><label> Drug : </label></td>
+          <td> <select name="select-choice-mini" id="edit-patient-age" data-mini="true" data-inline="true">
+    							<option value="">Tato</option>
+    							<option value="">Tato2</option>
+                                <option value="">Insulin </option>
+                                <option value="">Morphin</option>
+                                <option value="">....</option>
+                                
+    			</select>
+          </td>
+          
+          </tr>
+          	<tr>
+              <td><label> Date </label></td>
+              <td><input data-clear-btn="false" name="date-1" id="date-1" value="" type="date"> </td>
+             </tr>
+             <tr>
+              <td> <label>Time <label> </td>
+           	  <td> <input data-clear-btn="false" name="time-1" id="time-1" value="" type="time"> </td>
+             </tr>
+           </tbody>
+        </table>   
+        <select name="select-choice-mini" id="edit-patient-age" data-mini="true" data-inline="true">
+    							<option value="">Use today</option>
+    							<option value="">Use steady state</option>
+                                
+    			</select>
+               
+         <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="custom-table">               
+          <tbody>  
+             <tr>
+              <td> <label>Dosage <label> </td>
+           	  <td> <input name="text-1" id="text-1" value="" type="text"></td>
+             </tr>
+             <tr>
+              <td> <label>Interval <label> </td>
+           	  <td> <input name="text-1" id="text-1" value="" type="text"></td>
+             </tr>             
+          </tbody>
+        </table> 
+     <div class="center-button">
+        <a href="#detailPatient" data-role="button" data-inline="true">Cancel</a>
+        <a href="#detailPatient" data-role="button" data-inline="true">Ok</a>
+      </div>   
+    </div>
+   
+  </div>
+  
+  
+  
+  
+  
 
   <div data-role="page" id="editPatient">
       <div data-role="header">
           <p>Edit patient informations</p>
+          <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
           <div data-role="navbar">
               <ul>
-                  <li><a href="#home"><h2>Home</h2></a></li>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
                   <li><a href="#listepatients"><h2>Patients</h2></a></li>
                   <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
                   <li><a href="#chart"><h2>Chart</h2></a></li>
@@ -340,11 +590,15 @@
                        <td><input data-clear-btn="false" name="date-1" id="date-1" value="John" type="date"> </td>
                    </tr>
                    <tr>
-                       <td><label> Age:</label> </td>
-                       <td><input data-clear-btn="false" name="time-1" id="time-1" value="21" type="time"> </td>
+                       <td><label> Birthday:</label> </td>
+                       <td><input data-clear-btn="false" name="time-1" id="time-1" value="21/03/1980" type="date"> </td>
+                  </tr>
+                  <tr>
+                       <td><label> Weight:</label> </td>
+                       <td><input name="number-1" id="number-1" value="60" type="number"> </td>
                   </tr>
                    <tr>
-                       <td><label class="smallsize"> Gendre:</label> </td>
+                       <td><label > Gendre:</label> </td>
                        <td><select name="select-choice-mini" id="edit-patient-age" data-mini="true" data-inline="true">
     							<option value="Male">Male</option>
     							<option value="Female">Female</option>
@@ -373,37 +627,31 @@
                   </tr>
               </tbody>
             </table>
-            
+            <a data-role="button" href="#personalinfo">Save</a>
+          	<a data-role="button" href="#personalinfo">Cancel</a>
+      </div>
+     
+  </div>
+  
+  
+  <div data-role="page" id="editmedicalinfo">
+    <div data-role="header">
+      <h1> Change dosage</h1>
+  
+    </div>
+    <div data-role="content">
+    
             <table data-role="table"   class="ui-responsive table-stroke" id="button-table">
                 
               <tbody>
-                   <tr>
-                       <label> Medical info:</label>                        
-                  </tr>
-                   <tr>
-                       <td><label> Drug:</label> </td>
-                       <td><input name="text-1" id="text-1" value="Morphine" type="text"> </td>
-                  </tr>
+                              
                    <tr>
                        <td><label> Dosage:</label> </td>
-                       <td><input name="text-1" id="text-1" value="20 mg" type="text"> </td>
-                  </tr>
-                   <tr>
-                       <td><label> Date:</label> </td>
-                       <td><input name="date-1" id="date-1" value="20/02/2013" type="date"> </td>
-                  </tr>
-                   <tr>
-                       <td><label> Weight:</label> </td>
-                       <td><input name="number-1" id="number-1" value="60" type="number"> </td>
-                  </tr>
-                   <tr>
-                   		<td><label> Gist:</label> </td>
-                        <td >                           
-                            <input class="checkbox" name="checkbox-0 " type="checkbox">
-                         </td>                              	                     
+                       <td><input name="text-1" id="text-1" value="20    mg" type="text"> </td>
+                       
                   </tr>
                   <tr>
-                       <td><label> Administration:</label> </td>             
+                       <td><label> Interval:</label> </td>             
                      <td><select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
                                         <option value="standard">4h</option> 
                                         <option value="standard">6h</option> 
@@ -413,22 +661,44 @@
                         </select>
                       </td>
                   </tr>
+                   <tr>
+                       <td><label> Date:</label> </td>
+                       <td><input name="date-1" id="date-1" value="20/02/2013" type="date"> </td>
+                  </tr>
+                  <tr>
+              <td> <label>Time <label> </td>
+           	  <td> <input data-clear-btn="false" name="time-1" id="time-1" value="12:00" type="time"> </td>
+             </tr>
+                   
+                   <tr>
+                   		<td><label> Gist:</label> </td>
+                        <td >                           
+                            <input class="checkbox" name="checkbox-0 " type="checkbox">
+                         </td>                              	                     
+                  </tr>                  
                   
                </tbody>
             </table>
+             <select name="select-choice-mini" id="edit-patient-age" data-mini="true" data-inline="true">
+    							<option value="">Use today</option>
+    							<option value="">Use steady state</option>
+                                
+    			</select>
           
           
-          <a data-role="button" href="#listepatients">Save</a>
-          <a data-role="button" href="#listepatients">Cancel</a>
-      </div>
+          <a data-role="button" href="#medicalinfo">Save</a>
+          <a data-role="button" href="#medicalinfo">Cancel</a>
      
+    </div>
   </div>
-  
-  
-  
-  <div data-role="page" id="editMeasure">
+ 
+ 
+ 
+ 
+<div data-role="page" id="editMeasure">
     <div data-role="header">
       <p>Edit measure</p>
+      <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
     </div>
     <div data-role="content">
     	<table data-role="table"   class="ui-responsive table-stroke" id="button-table">
@@ -436,7 +706,7 @@
               <tbody>
                		<tr>
                        <td><label> Drug:</label> </td>
-                       <td><input  name="text-1" id="text-1" value="Morphine" type="text"> </td>
+                       <td><input  name="text-1" id="text-1" value="Tato" type="text"> </td>
                    </tr>
                    <tr>
                        <td><label> Date:</label> </td>
@@ -456,11 +726,79 @@
     	<div class="center-button">
             <a href="#mesuresPatient" data-role="button" data-inline="true">Cancel</a>
             <a href="#mesuresPatient" data-role="button" data-inline="true">Ok</a>
-         </div>   
-    
-    
+         </div>       
+    </div>    
+  </div>
+  
+  
+  <div data-role="page" id="editMeasure2">
+    <div data-role="header">
+      <p>Edit measure</p>
+      <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
     </div>
-    
+    <div data-role="content">
+    	<table data-role="table"   class="ui-responsive table-stroke" id="button-table">
+            
+              <tbody>
+               		<tr>
+                       <td><label> Drug:</label> </td>
+                       <td><input  name="text-1" id="text-1" value="Tato2" type="text"> </td>
+                   </tr>
+                   <tr>
+                       <td><label> Date:</label> </td>
+                       <td><input data-clear-btn="false" name="date-1" id="date-1" value="22/03/13" type="date"> </td>
+                   </tr>
+                   <tr>
+                       <td><label> Time:</label> </td>
+                       <td><input data-clear-btn="false" name="time-1" id="time-1" value="22:35" type="time"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Obs concentration:</label> </td>
+                       <td><input name="text-1" id="text-1" value="2 ug/L" type="text"> </td>
+                  </tr>
+               </tbody>
+            </table>
+              
+    	<div class="center-button">
+            <a href="#listepatients" data-role="button" data-inline="true">Cancel</a>
+            <a href="#mesuresPatient" data-role="button" data-inline="true">Ok</a>
+         </div>       
+    </div>    
+  </div>
+  
+  <div data-role="page" id="editMeasure2">
+    <div data-role="header">
+      <p>Edit measure</p>
+      <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
+    </div>
+    <div data-role="content">
+    	<table data-role="table"   class="ui-responsive table-stroke" id="button-table">
+            
+              <tbody>
+               		<tr>
+                       <td><label> Drug:</label> </td>
+                       <td><input  name="text-1" id="text-1" value="Tato2" type="text"> </td>
+                   </tr>
+                   <tr>
+                       <td><label> Date:</label> </td>
+                       <td><input data-clear-btn="false" name="date-1" id="date-1" value="22/03/13" type="date"> </td>
+                   </tr>
+                   <tr>
+                       <td><label> Time:</label> </td>
+                       <td><input data-clear-btn="false" name="time-1" id="time-1" value="22:35" type="time"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Obs concentration:</label> </td>
+                       <td><input name="text-1" id="text-1" value="2 ug/L" type="text"> </td>
+                  </tr>
+               </tbody>
+            </table>
+              
+    	<div class="center-button">
+            <a href="#listepatients" data-role="button" data-inline="true">Cancel</a>
+            <a href="#mesuresPatient2" data-role="button" data-inline="true">Ok</a>
+         </div>       
+    </div>    
   </div>
   
   
@@ -469,12 +807,11 @@
       <p>New measure</p>
     </div>
     <div data-role="content">
-    	  <table data-role="table"   class="ui-responsive table-stroke" id="button-table">
-            
+    	  <table data-role="table"   class="ui-responsive table-stroke" id="button-table">            
               <tbody>
               	   <tr>
                        <td><label> Drug:</label> </td>
-                       <td><input  name="text-1" id="text-1" value="" type="text"> </td>
+                       <td><label> Tato</label> </td>
                    </tr>
                    <tr>
                        <td><label> Date:</label> </td>
@@ -487,18 +824,111 @@
                    <tr>
                        <td><label> Obs concentration:</label> </td>
                        <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                       <td> <select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
+                                        <option value="standard">mg/l</option> 
+                                        <option value="standard">ug/l</option> 
+                                        <option value="standard">...</option>                                        
+                      </select></td>
                   </tr>
                </tbody>
-            </table>
+           </table>
               
     	<div class="center-button">
             <a href="#mesuresPatient" data-role="button" data-inline="true">Cancel</a>
             <a href="#mesuresPatient" data-role="button" data-inline="true">Ok</a>
-         </div>   
-    
+         </div>       
+    </div>    
+</div>
+  
+  
+<div data-role="page" id="ajoutMeasure3">
+    <div data-role="header">
+      <p>New measure</p>
     </div>
-    
-  </div>
+    <div data-role="content">
+    	  <table data-role="table"   class="ui-responsive table-stroke" id="button-table">            
+              <tbody>
+              	   <tr>
+                       <td><label> Drug:</label> </td>
+                       <td><select name="select-choice-mini" id="edit-patient-age" data-mini="true" data-inline="true">
+    							<option value="Male">Tato</option>
+    							<option value="Female">Tato2</option>
+    						</select> </td>
+                   </tr>
+                   <tr>
+                       <td><label> Date:</label> </td>
+                       <td><input data-clear-btn="false" name="date-1" id="date-1" value="" type="date"> </td>
+                   </tr>
+                   <tr>
+                       <td><label> Time:</label> </td>
+                       <td><input data-clear-btn="false" name="time-1" id="time-1" value="" type="time"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Obs concentration:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                       <td> <select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
+                                        <option value="standard">mg/l</option> 
+                                        <option value="standard">ug/l</option> 
+                                        <option value="standard">...</option>                                        
+                      </select></td>
+                  </tr>
+               </tbody>
+           </table>
+              
+    	<div class="center-button">
+            <a href="#listepatients" data-role="button" data-inline="true">Cancel</a>
+            <a href="#mesuresPatient" data-role="button" data-inline="true">Ok</a>
+         </div>       
+    </div>    
+</div>
+  
+  
+  
+   <div data-role="page" id="ajoutMeasure2">
+    <div data-role="header">
+      <p>New measure</p>
+    </div>
+    <div data-role="content">
+    	  <table data-role="table"   class="ui-responsive table-stroke" id="button-table">            
+              <tbody>
+              	   <tr>
+                       <td><label> Drug:</label> </td>
+                       <td><label> Tato2</label> </td>
+                   </tr>
+                   <tr>
+                       <td><label> Date:</label> </td>
+                       <td><input data-clear-btn="false" name="date-1" id="date-1" value="" type="date"> </td>
+                   </tr>
+                   <tr>
+                       <td><label> Time:</label> </td>
+                       <td><input data-clear-btn="false" name="time-1" id="time-1" value="" type="time"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Obs concentration:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                       <td> <select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
+                                        <option value="standard">mg/l</option> 
+                                        <option value="standard">ug/l</option> 
+                                        <option value="standard">...</option>                                        
+                      </select></td>
+                  </tr>
+               </tbody>
+           </table>
+              
+    	<div class="center-button">
+            <a href="#mesuresPatient2" data-role="button" data-inline="true">Cancel</a>
+            <a href="#mesuresPatient2" data-role="button" data-inline="true">Ok</a>
+         </div>       
+    </div>    
+</div>
+  
+  
+  
+  
+  
+  
+  
+  
   
   
 
@@ -507,7 +937,7 @@
           <p>List of practicians</p> 
          <div data-role="navbar">
               <ul>
-                  <li><a href="#home"><h2>Home</h2></a></li>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
                   <li><a href="#listepatients"><h2>Patients</h2></a></li>
                   <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
                   <li><a href="#chart"><h2>Chart</h2></a></li>
@@ -548,7 +978,7 @@
       <p>Chart Patient </p>
       <div data-role="navbar">
               <ul>
-                  <li><a href="#home"><h2>Home</h2></a></li>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
                   <li><a href="#listepatients"><h2>Patients</h2></a></li>
                   <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
                   <li><a href="#chart"><h2>Chart</h2></a></li>
@@ -558,43 +988,43 @@
     <div data-role="content">
      <div class=center-wrapper>
       <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="patient-table">
-               
+             <a href="#dialog" data-role="button" data-rel="dialog" data-transition="pop">Add Curve</a>  
           <tbody>
           <tr>
           <td>
           		<div  id="curvesPatient"data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="true">
                      <div data-role="collapsible">
-                        <h3>SMITH John </h3>
-                        <a href=#detailCurve data-role=button>Curve 0</a>
-                        <a href=#detailCurve data-role=button>Curve 1</a>
+                        <h3>SMITH John, Tato - 400mg-12h</h3>
+                        <a href="#detailCurve" data-role=button>Curve 1, 600ug 23/05/2013, 23:04</a>
+                        <a href="#detailCurve" data-role=button>Curve 0, 700ug, 15/05/2013, 10:00</a>
                     </div>
                 </div>
           </td>
-          <td><a href=#dialog data-role="button" data-rel="dialog" data-transition="pop">Add Curve</a></td>
+          
           </tr>
           <tr>
           <td>
           		<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="true">
                      <div data-role="collapsible">
-                        <h3>SMITH John</h3>
-                        <a href=#detailCurve data-role=button>Curve 0</a>
-                        <a href=#detailCurve data-role=button>Curve 1</a>
+                        <h3>SMITH John, Tato2 - 300mg-6h</h3>
+                        <a href="#detailCurve" data-role=button>Curve 1, 600ug 20/05/2013, 10:00</a>
+                        <a href="#detailCurve" data-role=button>Curve 0, 300ug  10/05/2013, 12:00</a>
                     </div>
                 </div>
            </td>
-          <td><a href=#dialog data-role="button" data-rel="dialog" data-transition="pop">Add Curve</a></td>
+          
           </tr>
           <tr>
           <td>
           	<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="true">
                      <div data-role="collapsible">
-                        <h3>SMITH John</h3>
-                        <a href=#detailCurve data-role=button>Curve 0</a>
-                        <a href=#detailCurve data-role=button>Curve 1</a>
+                        <h3>SMITH James, Aspirin - 200mg-18h</h3>
+                        <a href="#detailCurve" data-role=button>Curve 1, 200ug 23/05/2013, 23:15</a>
+                        <a href="#detailCurve" data-role=button>Curve 0, 300ug 15/05/2013, 15:30</a>
                     </div>
                 </div>
           </td>
-          <td><a href=#dialog data-role="button" data-rel="dialog" data-transition="pop">Add Curve</a></td>
+          
           </tr>
           </tbody>
       </table>
@@ -610,10 +1040,11 @@
 
   <div data-role="page" id="detaildocteur">
       <div data-role="header">
-          <p>Doctor details</p> 
+          <p>Practician details</p> 
+          <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
          <div data-role="navbar">
               <ul>
-                  <li><a href="#home"><h2>Home</h2></a></li>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
                   <li><a href="#listepatients"><h2>Patients</h2></a></li>
                   <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
                   <li><a href="#chart"><h2>Chart</h2></a></li>
@@ -624,7 +1055,7 @@
       
       
           <b>SMITH John</b><br>          
-          <b>Age:</b> 21<br>
+          <b>Institution:</b> CHUV<br>
           <b>Gender:</b> M<br>
           <b>Street:</b> Main street<br>
           <b>City:</b> Fribourg<br>
@@ -644,9 +1075,10 @@
   <div data-role="page" id="editDocteur">
       <div data-role="header">
           <p>Edit doctor informations</p>
+          <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
           <div data-role="navbar">
               <ul>
-                  <li><a href="#home"><h2>Home</h2></a></li>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
                   <li><a href="#listepatients"><h2>Patients</h2></a></li>
                   <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
                   <li><a href="#chart"><h2>Chart</h2></a></li>
@@ -668,8 +1100,8 @@
                        <td><input data-clear-btn="false" name="date-1" id="date-1" value="John" type="date"> </td>
                    </tr>
                    <tr>
-                       <td><label> Age:</label> </td>
-                       <td><input data-clear-btn="false" name="time-1" id="time-1" value="21" type="time"> </td>
+                       <td><label> Birthday:</label> </td>
+                       <td><input data-clear-btn="false" name="time-1" id="time-1" value="21/03/1980" type="time"> </td>
                   </tr>
                    <tr>
                        <td><label class="smallsize"> Gendre:</label> </td>
@@ -729,15 +1161,19 @@
                    </tr>
                    <tr>
                        <td><label> Name:</label> </td>
-                       <td><input data-clear-btn="false" name="date-1" id="date-1" value="" type="date"> </td>
+                       <td><input data-clear-btn="false" name="date-1" id="text" value="" type="date"> </td>
                    </tr>
                    <tr>
-                       <td><label> Age:</label> </td>
-                       <td><input data-clear-btn="false" name="time-1" id="time-1" value="" type="time"> </td>
+                       <td><label> Institution:</label> </td>
+                       <td><input data-clear-btn="false" name="time-1" id="date-1" value="" type="text"> </td>
                   </tr>
                    <tr>
                        <td><label> Gendre:</label> </td>
-                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                       <td><select name="select-choice-mini" id="edit-patient-age" data-mini="true" data-inline="true">
+    							<option value="Male">Male</option>
+    							<option value="Female">Female</option>
+    						</select>
+                          </td>
                   </tr>
                    <tr>
                        <td><label> Street:</label> </td>
@@ -762,7 +1198,7 @@
               </tbody>
             </table>
             
-           	 <a href="#listedocteurs" data-role="button" data-inline="true">Save</a>           
+           	 <a href="#listedocteurs" data-role="button">Save</a>           
          	 
          </div>
     
@@ -771,80 +1207,82 @@
   
   <!--Dialog chart-->
   <div data-role="page" id="dialog">
-    <div data-role="header">
-      <p>Add a new curve</p>
-    </div>
+        <div data-role="header">
+          <p>Add a new curve</p>
+        </div>
     <div data-role="content">
      
       <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="custom-table">               
           <tbody>
+           <tr>
+                    <td><label> Curve name:</label></td>
+                    <td> <input  name="text-basic" id="curve-name" value="Curve 0" type="text"></td>
+              </tr>
+          <tr>
+    		<td><label> Patient </label></td>
+     		<td><select name="select-choice-mini" id="edit-patient-age" data-mini="true" data-inline="true">
+    							<option value="">Smith John </option>
+                                <option value="">Smith James</option>    							
+                                
+    			</select></td>
+      		</tr>
+             <tr>
+    		<td><label> Drug </label></td>
+     		<td><select name="select-choice-mini" id="edit-patient-age" data-mini="true" data-inline="true">
+    							<option value="">Tato</option>
+                                <option value="">Tato2</option>    							
+                                
+    			</select></td>
+      		</tr>
+          
           <tr>
     		<td><label> Percentiles </label></td>
      		<td><select name="select-choice-mini" id="edit-patient-age" data-mini="true" data-inline="true">
-    							<option value="">25-75</option>
+    							<option value="">Custom </option>
+                                <option value="">25-75</option>
     							<option value="">10-90</option>
                                 <option value="">5-95</option>
+                                
     			</select></td>
       		</tr>
-     		<tr>
-              <td><label> Custom </label></td>
-              <td><div data-role="fieldcontain">
-                <label for="slider">Value:</label>
-                <input type="range" name="slider" id="slider" value="30" min="0" max="99" />
-              </div> </td>
-              <td> - </td>
-            <td> <div data-role="fieldcontain">
-              <label for="slider2">Value:</label>
-              <input type="range" name="slider2" id="slider2" value="90" min="0" max="99" />
-            </div></td>
-              </tr>
+            <tr>
+            	<td><label>Custom</label></td>
+                <td><input name="text-1" id="text-1" value="30" type="number" style="width:75px"></td>
+                <td>-</td>
+                <td><input name="text-1" id="text-1" value="70" type="number" style="width:75px"></td>
+            </tr>
+     		
           </tbody>
         </table>   
        <div class="center-button">
       		<div class="ui-block-a"><a href="#advanceDialog" data-role="button" data-rel="dialog" data-transition="pop" >Advanced</a></div>
             <div class="ui-block-a"><a href="#chart" data-role="button" >Cancel</a></div> 
             <div class="ui-block-a"><a href="#detailCurve" data-role="button" >OK</a></div> 
-       </div>    
-    </div>
-    <div data-role="footer">
-      
-    </div>
+       </div>          
+    </div>   
   </div>
   
   
-  
-<!--
-<!-- generating curve
-  <div data-role="page" id="genetareCurve">
+  <div data-role="page" id="custom">
     <div data-role="header">
-      <p>Generate Curve</p>
-       <div data-role="navbar">
-              <ul>
-                  <li><a href="#home"><h2>Home</h2></a></li>
-                  <li><a href="#listepatients"><h2>Patients</h2></a></li>
-                  <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
-                  <li><a href="#chart"><h2>Chart</h2></a></li>
-              </ul> 
-          </div><!-- /navbar  
+      <h1>Header</h1>
     </div>
-    <div data-role="content">    
-	<img src="img/curve.png" width="1315" height="502">
-	<div class="center-button">
-        <a href="#detailCurve" data-role="button" data-inline="true">Save</a> 
-      </div>
-    </div>    
-    
-  </div>-->
-  
+    <div data-role="content">Content</div>
+    <div data-role="footer">
+      <h4>Footer</h4>
+    </div>
+  </div>  
+ 
   
   
   
   <div data-role="page" id="detailCurve">
     <div data-role="header">
-      <p>Curve </p>
+      <h1>Curve </h1>
+      <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
        <div data-role="navbar">
               <ul>
-                  <li><a href="#home"><h2>Home</h2></a></li>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
                   <li><a href="#listepatients"><h2>Patients</h2></a></li>
                   <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
                   <li><a href="#chart"><h2>Chart</h2></a></li>
@@ -855,13 +1293,13 @@
    	  <img src="img/curve.png" width="1315" height="502">
 
 	<div class="center-button">
-      <a href=#pop data-role="button" data_rel="popup" data-inline="true" data-transition="pop">Send</a> 
-     <!-- <div data-role="popup" id="pop">
+      <a href="#pop" data-role="button" data_rel="popup" data-inline="true" data-transition="pop">Send</a> 
+      <!--<div data-role="popup" id="pop" data-transition="pop">
    			 <p>The information has been saved into a parametre.xml file.</p>
-		</div> -->
+	  </div> -->
       <a href="#prediction" data-role="button" data-inline="true">Prediction</a> 
       <a href="#newDosage" data-role="button" data-inline="true" data-rel="dialog" data-transition="pop">Change dosage</a> 
-      <a href="#ajoutMeasure" data-role="button" data-inline="true">Add measure</a> 
+      <a href="#ajoutMeasure1" data-role="button" data-rel="dialog" data-transition="pop" data-inline="true">Add measure</a> 
       
       </div>    
     </div>
@@ -869,26 +1307,65 @@
   </div>
   
   
-  
-  <div data-role="popup" id="pop">
+   <div data-role="page" id="ajoutMeasure1">
     <div data-role="header">
+      <h1>New measure</h1>
+    </div>
+    <div data-role="content">
+    	  <table data-role="table"   class="ui-responsive table-stroke" id="button-table">
+            
+              <tbody>              	  
+                   <tr>
+                       <td><label> Date:</label> </td>
+                       <td><input data-clear-btn="false" name="date-1" id="date-1" value="" type="date"> </td>
+                   </tr>
+                   <tr>
+                       <td><label> Time:</label> </td>
+                       <td><input data-clear-btn="false" name="time-1" id="time-1" value="" type="time"> </td>
+                  </tr>
+                   <tr>
+                       <td><label> Obs concentration:</label> </td>
+                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                  </tr>
+               </tbody>
+            </table>
+              
+    	<div class="center-button">
+            <a href="#detailCurve" data-role="button" data-inline="true">Cancel</a>
+            <a href="#detailCurve" data-role="button" data-inline="true">Ok</a>
+         </div>   
+    
+    </div>
+    
+  </div>
+  
+  
+  
+  
+  
+  
+  <div data-role="page" id="pop">
+    <div data-role="header">
+    <h1> Data have been sent</h1>
+    <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
       
     </div>
     <div data-role="content">
-    <p>The information has been saved into a parametre.xml file.</p>
+    <p>The information has been saved into a .xml parameter file.</p>
     </div>
    
   </div>
-  
+
   
   
   <!--predictions-->
   <div data-role="page" id="prediction">
     <div data-role="header">
-      <p>Predictions</p>
+      <h1>Predictions</h1>
+      <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
        <div data-role="navbar">
               <ul>
-                  <li><a href="#home"><h2>Home</h2></a></li>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
                   <li><a href="#listepatients"><h2>Patients</h2></a></li>
                   <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
                   <li><a href="#chart"><h2>Chart</h2></a></li>
@@ -901,7 +1378,7 @@
 	<div class="center-button">
        	<a href="#prediction4" data-role="button" data-icon="arrow-l" data-inline="true" ></a>
             
-        <a href="#prediction2" data-role="button" data-icon="arrow-r"   data-inline="true"></a>
+        <a href="#prediction2" data-role="button" data-icon="arrow-r" data-iconpos="right"  data-inline="true"></a>
    	  </div>
        		<a href="#detailCurve" data-role="button">Save</a> 
         	<a href="#target" data-role="button" >Targets</a> 
@@ -913,10 +1390,11 @@
   
   <div data-role="page" id="prediction2">
     <div data-role="header">
-       <p>Predictions</p>
+       <h1>Predictions</h1>
+       <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
        <div data-role="navbar">
               <ul>
-                  <li><a href="#home"><h2>Home</h2></a></li>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
                   <li><a href="#listepatients"><h2>Patients</h2></a></li>
                   <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
                   <li><a href="#chart"><h2>Chart</h2></a></li>
@@ -928,7 +1406,7 @@
         
 		<img src="img/prediction2.jpg" width="1315" height="502">
 		 <a href="#prediction" data-role="button" data-icon="arrow-l" data-inline="true" ></a>         
-        <a href="#prediction3" data-role="button" data-icon="arrow-r"   data-inline="true"></a>
+        <a href="#prediction3" data-role="button" data-icon="arrow-r" data-iconpos="right"  data-inline="true"></a>
    	  </div>
        		<a href="#detailCurve" data-role="button">Save</a> 
         	<a href="#target" data-role="button" >Targets</a>      
@@ -938,10 +1416,11 @@
   
   <div data-role="page" id="prediction3">
     <div data-role="header">
-      <p>Predictions</p>
+      <h1>Predictions</h1>
+      <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
        <div data-role="navbar">
               <ul>
-                  <li><a href="#home"><h2>Home</h2></a></li>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
                   <li><a href="#listepatients"><h2>Patients</h2></a></li>
                   <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
                   <li><a href="#chart"><h2>Chart</h2></a></li>
@@ -953,7 +1432,7 @@
     
 		<img src="img/prediction3.jpg" width="1315" height="502">
  		<a href="#prediction2" data-role="button" data-icon="arrow-l" data-inline="true" ></a>     
-        <a href="#prediction4" data-role="button" data-icon="arrow-r"   data-inline="true"></a>
+        <a href="#prediction4" data-role="button" data-icon="arrow-r" data-iconpos="right"  data-inline="true"></a>
    	  </div>
        		<a href="#detailCurve" data-role="button">Save</a> 
         	<a href="#target" data-role="button" >Targets</a> </div>
@@ -962,10 +1441,11 @@
   
   <div data-role="page" id="prediction4">
     <div data-role="header">
-      <p>Predictions</p>
+      <h1>Predictions</h1>
+      <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
        <div data-role="navbar">
               <ul>
-                  <li><a href="#home"><h2>Home</h2></a></li>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
                   <li><a href="#listepatients"><h2>Patients</h2></a></li>
                   <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
                   <li><a href="#chart"><h2>Chart</h2></a></li>
@@ -977,7 +1457,7 @@
     
 		<img src="img/prediction4.jpg" width="1315" height="502"> 
 		<a href="#prediction3" data-role="button" data-icon="arrow-l" data-inline="true" ></a>     
-        <a href="#prediction" data-role="button" data-icon="arrow-r"   data-inline="true"></a>
+        <a href="#prediction" data-role="button" data-icon="arrow-r" data-iconpos="right"  data-inline="true"></a>
    	  </div>
        		<a href="#detailCurve" data-role="button">Save</a> 
         	<a href="#target" data-role="button" >Targets</a> </div>
@@ -991,13 +1471,18 @@
    <!--new dosage-->
   <div data-role="page" id="newDosage">
     <div data-role="header">
-      <p>New dosage</p>
+      <h1>New dosage</h1>     
     </div>
     <div data-role="content">
     	<table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke" id="custom-table">               
           <tbody>
+          <tr>
+          <td><label> Drug : </label></td>
+          <td> <label> Tato </label></td>
+          
+          </tr>
           	<tr>
-              <td><label> Date </label></th>
+              <td><label> Date </label></td>
               <td><input data-clear-btn="false" name="date-1" id="date-1" value="" type="date"> </td>
              </tr>
              <tr>
@@ -1016,11 +1501,17 @@
           <tbody>  
              <tr>
               <td> <label>Dosage <label> </td>
-           	  <td> <input name="text-1" id="text-1" value="" type="text"></td>
+           	  <td> <input name="text-1" id="text-1" value="           mg" type="text"></td>
              </tr>
              <tr>
               <td> <label>Interval <label> </td>
-           	  <td> <input name="text-1" id="text-1" value="" type="text"></td>
+           	  <td> <select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
+                                        <option value="standard">4h</option> 
+                                        <option value="standard">6h</option> 
+                                        <option value="standard">12h</option> 
+                                        <option value="standard">18h</option> 
+                                        <option value="standard">24h</option>                            
+                        </select></td>
              </tr>             
           </tbody>
         </table> 
@@ -1031,6 +1522,10 @@
     </div>
    
   </div>
+ 
+ 
+
+ 
   
   
    <!--Advanced settings-->
@@ -1043,16 +1538,13 @@
     <table data-role="table"   class="ui-responsive table-stroke" id="button-table">
             
           <tbody>
-              <tr>
-                    <td><label> Curve:</label></td>
-                    <td> <input  name="text-basic" id="curve-name" value="Curve 0" type="text"></td>
-              </tr>
+             
               <tr>
                     <td><label> Model:</label></td>
                     <td>                    
                         <select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
                             <option value="standard">Analytic</option>
-                            <option value="rush">Analitic bi-compartemental</option>
+                            <option value="rush">Analytic bi-compartemental</option>
                             <option value="express">Runge-Kutta</option>
                             <option value="overnight">Runge-Kutta bi-compartemental</option>
                         </select>
@@ -1094,10 +1586,11 @@
   
   <div data-role="page" id="target">
     <div data-role="header">
-      <p>Targets</p>
+      <h1>Targets</h1>
+      <a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
       <div data-role="navbar">
               <ul>
-                  <li><a href="#home"><h2>Home</h2></a></li>
+                  <!--<li><a href="#home"><h2>Home</h2></a></li>-->
                   <li><a href="#listepatients"><h2>Patients</h2></a></li>
                   <li><a href="#listedocteurs"><h2>Practicians</h2></a></li>
                   <li><a href="#chart"><h2>Chart</h2></a></li>
@@ -1118,26 +1611,26 @@
                   
                   <tbody>
                   <tr>
-                  <td>peak</td>
-                  <td>1200</td>
-                  <td>1300</td>
-                  <td>2h00</td>
+                  <td class="border">peak</td>
+                  <td class="border">1200</td>
+                  <td class="border">1300</td>
+                  <td class="border">2h00</td>
                   <td>3h00</td>
-                  <td><a data-role=button href="#editTarget">Edit</a></td>
+                  <td><a data-role="button" data-rel="dialog" data-transition="pop" href="#editTarget">Edit</a></td>
                   </tr>
                   <tr>
-                  <td>peak</td>
-                  <td>1000</td>
-                  <td>1100</td>
-                  <td>3h00</td>
+                  <td class="border">peak</td>
+                  <td class="border">1000</td>
+                  <td class="border">1100</td>
+                  <td class="border">3h00</td>
                   <td>4h00</td>
-                  <td><a data-role=button href="#editTarget">Edit</a></td>
+                  <td><a data-role="button" data-rel="dialog" data-transition="pop" href="#editTarget">Edit</a></td>
                   </tr>
                  
                   </tbody>
               </table>
               
-              <a data-role="button" href="#addTarget">Add target</a>
+              <a data-role="button" data-rel="dialog" data-transition="pop" href="#addTarget">Add target</a>
               
               </div>
                 
@@ -1198,9 +1691,7 @@
     
     
      </div>
-    <div data-role="footer">
-      
-    </div>
+  
   </div>
   
   
@@ -1225,24 +1716,28 @@
          <thead><tr>
           <th> </th>
             <th>Concentration</th>
+            <th>   </th>
              <th>Time</th>
            </tr></thead>              	     	          
                         	   
                     
                 <tbody>    
                    <tr>
-                       <td><label> Min:</label> </td>
-                       <td><input  name="text-1" id="text-1" value="" type="text"> </td>
+                       <td ><label> Min:</label> </td>
+                       <td ><input  name="text-1" id="text-1" value="" type="text"> </td>
+                      <td> </td>
                        <td><input  name="text-1" id="text-1" value="" type="text"> </td>
                    </tr>
                    <tr>
                        <td><label> Best:</label> </td>
-                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                       <td ><input name="text-1" id="text-1" value="" type="text"> </td>
+                       <td> </td>
                        <td><input name="text-1" id="text-1" value="" type="text"> </td>
                   </tr>
                    <tr>
                        <td><label> Max:</label> </td>
-                       <td><input name="text-1" id="text-1" value="" type="text"> </td>
+                       <td ><input name="text-1" id="text-1" value="" type="text"> </td>
+                       <td> </td>
                        <td><input name="text-1" id="text-1" value="" type="text"> </td>
                   </tr>
                </tbody>
@@ -1253,16 +1748,13 @@
             <a href="#target" data-role="button" data-inline="true">Ok</a>
          </div>   
     
-    
     </div>
-    <div data-role="footer">
-      
-    </div>
+   
   </div>
   
-  
-  
-  
-  
-  </body>
+        
+        
+        
+        
+    </body>
   </html>
